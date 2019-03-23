@@ -2,15 +2,26 @@ use_frameworks!
 
 workspace 'movietracker'
 
+def useSwiftLint
+  pod 'SwiftLint'
+  
+  script_phase :name => 'Swift Lint Check',
+  :script => '"${PODS_ROOT}/SwiftLint/swiftlint"',
+  :execution_position => :before_compile
+end
+
 def commonPods
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'SwiftLint'
 end
 
 
 target 'movietracker' do
     platform :ios, '11.0'
     project 'movietracker'
+
+    useSwiftLint
 
     # Pods for movietracker
     commonPods
