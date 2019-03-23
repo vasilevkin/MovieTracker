@@ -1,0 +1,30 @@
+use_frameworks!
+
+workspace 'movietracker'
+
+def commonPods
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
+end
+
+
+target 'movietracker' do
+    platform :ios, '11.0'
+    project 'movietracker'
+
+    # Pods for movietracker
+    commonPods
+
+    target 'movietrackerTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+end
+
+target 'movietrackerUITests' do
+    platform :ios, '11.0'
+    project 'movietracker'
+
+    inherit! :search_paths
+    # Pods for testing
+end
