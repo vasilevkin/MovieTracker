@@ -18,6 +18,12 @@ protocol HTTPClientService {
 
 final class HTTPClient: HTTPClientService {
     
+    /**
+     Sends a 'get' request to a specified URL
+     
+     - Parameter url: String of URL
+     - Returns: Optional observable Data type
+     */
     func get(url: String) -> Observable<Data?> {
         guard let url = URL(string: url) else {
             dLog("Unexpectedly found nil")
@@ -30,6 +36,13 @@ final class HTTPClient: HTTPClientService {
             .catchErrorJustReturn(nil)
     }
     
+    /**
+     Sends a 'post' request to a specified URL
+     
+     - Parameter url: String of URL
+     - Parameter params: Json object data
+     - Returns: Optional observable response Data type
+     */
     func post(url: String, params: [String: Any]) -> Observable<Data?> {
         guard let url = URL(string: url) else {
             dLog("Unexpectedly found nil")
@@ -47,4 +60,3 @@ final class HTTPClient: HTTPClientService {
             .catchErrorJustReturn(nil)
     }
 }
-
