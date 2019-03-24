@@ -116,13 +116,14 @@
 		860C39C222460E8F008281D1 /* movietracker */ = {
 			isa = PBXGroup;
 			children = (
-				860C39C322460E8F008281D1 /* AppDelegate.swift */,
+				867F63DB224783DD00D2524D /* Assembly */,
+				867F63DE2247853B00D2524D /* Models */,
+				867F63E02247855D00D2524D /* Services */,
+				867F63DF2247854300D2524D /* Resources */,
+				867F63E12247859C00D2524D /* Scenes */,
+				867F63DA224783C800D2524D /* Supporting Files */,
 				860C39C522460E8F008281D1 /* ViewController.swift */,
-				860C39C722460E8F008281D1 /* Main.storyboard */,
-				860C39CD22460E91008281D1 /* Assets.xcassets */,
-				860C39CF22460E91008281D1 /* LaunchScreen.storyboard */,
 				860C39D222460E91008281D1 /* Info.plist */,
-				860C39CA22460E8F008281D1 /* movietracker.xcdatamodeld */,
 			);
 			path = movietracker;
 			sourceTree = "<group>";
@@ -143,6 +144,69 @@
 				860C39E822460E92008281D1 /* Info.plist */,
 			);
 			path = movietrackerUITests;
+			sourceTree = "<group>";
+		};
+		867F63DA224783C800D2524D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				867F63DC2247845100D2524D /* Extensions */,
+				867F63DD2247847100D2524D /* Utils */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		867F63DB224783DD00D2524D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				860C39C322460E8F008281D1 /* AppDelegate.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		867F63DC2247845100D2524D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		867F63DD2247847100D2524D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		867F63DE2247853B00D2524D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				860C39CA22460E8F008281D1 /* movietracker.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		867F63DF2247854300D2524D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				860C39CD22460E91008281D1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		867F63E02247855D00D2524D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		867F63E12247859C00D2524D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				860C39CF22460E91008281D1 /* LaunchScreen.storyboard */,
+				860C39C722460E8F008281D1 /* Main.storyboard */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		8EA027706CE9235EC3FC28F9 /* Pods */ = {
