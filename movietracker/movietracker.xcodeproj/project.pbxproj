@@ -14,6 +14,7 @@
 		860C39D122460E91008281D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C39CF22460E91008281D1 /* LaunchScreen.storyboard */; };
 		860C39DC22460E92008281D1 /* movietrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39DB22460E92008281D1 /* movietrackerTests.swift */; };
 		860C39E722460E92008281D1 /* movietrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39E622460E92008281D1 /* movietrackerUITests.swift */; };
+		865B67102247CF92002ECD99 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B670F2247CF92002ECD99 /* DebugPrint.swift */; };
 		867F63E322478C2C00D2524D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867F63E222478C2C00D2524D /* LoginViewController.swift */; };
 		867F63E62247901800D2524D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867F63E52247901800D2524D /* FeaturedViewController.swift */; };
 		867F63E82247923400D2524D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867F63E72247923400D2524D /* App.swift */; };
@@ -59,6 +60,7 @@
 		860C39E222460E92008281D1 /* movietrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movietrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C39E622460E92008281D1 /* movietrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movietrackerUITests.swift; sourceTree = "<group>"; };
 		860C39E822460E92008281D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		865B670F2247CF92002ECD99 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		867F63E222478C2C00D2524D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		867F63E52247901800D2524D /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		867F63E72247923400D2524D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -153,11 +155,19 @@
 			path = movietrackerUITests;
 			sourceTree = "<group>";
 		};
+		865B670E2247CF29002ECD99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				865B670F2247CF92002ECD99 /* DebugPrint.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		867F63DA224783C800D2524D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				867F63DC2247845100D2524D /* Extensions */,
-				867F63DD2247847100D2524D /* Utils */,
+				865B670E2247CF29002ECD99 /* Utils */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,13 +187,6 @@
 				867F63E9224793E000D2524D /* UIStoryboard+ViewControllers.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		867F63DD2247847100D2524D /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		867F63DE2247853B00D2524D /* Models */ = {
@@ -518,6 +521,7 @@
 				867F63ED2247A94E00D2524D /* HTTPClientService.swift in Sources */,
 				867F63E82247923400D2524D /* App.swift in Sources */,
 				860C39C422460E8F008281D1 /* AppDelegate.swift in Sources */,
+				865B67102247CF92002ECD99 /* DebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
