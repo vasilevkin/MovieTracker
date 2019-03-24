@@ -68,7 +68,7 @@ It plays movie trailers from YouTube.
 * Continuous integration
 * Unit testing
 * UI testing
-
+* Debug print log
 
 ## Getting started
 
@@ -97,6 +97,7 @@ $ open movietracker.xcworkspace
 ## Related blog posts:
 
 [New project starts. Welcome Movie Tracker - trailers!](https://svasilevkin.wordpress.com/2019/03/23/new-project-starts-welcome-movie-tracker-trailers/)
+[Debug print log](https://svasilevkin.wordpress.com/2019/03/24/debug-print-log/)
 
 
 ## Author

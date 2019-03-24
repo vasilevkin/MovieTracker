@@ -20,7 +20,7 @@ final class HTTPClient: HTTPClientService {
     
     func get(url: String) -> Observable<Data?> {
         guard let url = URL(string: url) else {
-            
+            dLog("Unexpectedly found nil")
             return Observable.empty()
         }
         let request = URLRequest(url: url)
@@ -32,7 +32,7 @@ final class HTTPClient: HTTPClientService {
     
     func post(url: String, params: [String: Any]) -> Observable<Data?> {
         guard let url = URL(string: url) else {
-            
+            dLog("Unexpectedly found nil")
             return Observable.empty()
         }
         var request = URLRequest(url: url)
