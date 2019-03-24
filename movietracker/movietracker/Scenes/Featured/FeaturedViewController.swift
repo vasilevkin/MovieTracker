@@ -7,9 +7,15 @@
 //
 
 import UIKit
+#if !RX_NO_MODULE
+import RxSwift
+import RxCocoa
+#endif
 
 class FeaturedViewController: UIViewController {
 
+    @IBOutlet weak var mainView: UIView!
+    
     // MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
