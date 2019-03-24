@@ -1,5 +1,5 @@
 //
-//  HTTPClientService.swift
+//  HTTPClient.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 24/03/2019.
@@ -10,11 +10,6 @@
 import RxSwift
 import RxCocoa
 #endif
-
-protocol HTTPClientService {
-    func get(url: String) -> Observable<Data?>
-    func post(url: String, params: [String: Any]) -> Observable<Data?>
-}
 
 final class HTTPClient: HTTPClientService {
     
