@@ -14,6 +14,7 @@
 		860C39D122460E91008281D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C39CF22460E91008281D1 /* LaunchScreen.storyboard */; };
 		860C39DC22460E92008281D1 /* movietrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39DB22460E92008281D1 /* movietrackerTests.swift */; };
 		860C39E722460E92008281D1 /* movietrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39E622460E92008281D1 /* movietrackerUITests.swift */; };
+		863F2EC122494DEA00B2F29A /* ApiThemoviedbResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863F2EC022494DEA00B2F29A /* ApiThemoviedbResponses.swift */; };
 		865B67102247CF92002ECD99 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B670F2247CF92002ECD99 /* DebugPrint.swift */; };
 		865B67122247E68B002ECD99 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B67112247E68B002ECD99 /* HTTPClient.swift */; };
 		867F63E322478C2C00D2524D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867F63E222478C2C00D2524D /* LoginViewController.swift */; };
@@ -61,6 +62,7 @@
 		860C39E222460E92008281D1 /* movietrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movietrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C39E622460E92008281D1 /* movietrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movietrackerUITests.swift; sourceTree = "<group>"; };
 		860C39E822460E92008281D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863F2EC022494DEA00B2F29A /* ApiThemoviedbResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiThemoviedbResponses.swift; sourceTree = "<group>"; };
 		865B670F2247CF92002ECD99 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		865B67112247E68B002ECD99 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		867F63E222478C2C00D2524D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				865B67112247E68B002ECD99 /* HTTPClient.swift */,
+				863F2EC022494DEA00B2F29A /* ApiThemoviedbResponses.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				867F63EA224793E000D2524D /* UIStoryboard+ViewControllers.swift in Sources */,
 				860C39CC22460E8F008281D1 /* movietracker.xcdatamodeld in Sources */,
 				867F63E62247901800D2524D /* FeaturedViewController.swift in Sources */,
+				863F2EC122494DEA00B2F29A /* ApiThemoviedbResponses.swift in Sources */,
 				867F63ED2247A94E00D2524D /* HTTPClientService.swift in Sources */,
 				865B67122247E68B002ECD99 /* HTTPClient.swift in Sources */,
 				867F63E82247923400D2524D /* App.swift in Sources */,
