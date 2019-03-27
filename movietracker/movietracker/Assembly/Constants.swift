@@ -16,6 +16,6 @@ import Foundation
  This is just a data struct to show data format.
  Actual data is crypted.
  */
-private struct Constants {
-    static let themoviedbApiKey = "PUT_YOUR_KEY_HERE"
+struct Constants {
+    let themoviedbApiKey = "PUT_YOUR_KEY_HERE"
 }
