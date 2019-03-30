@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarouselSectionTableViewCell" rowHeight="310" id="dRV-xe-Q9a" customClass="CarouselSectionTableViewCell" customModule="movietracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="361"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dRV-xe-Q9a" id="axt-I0-8cR">
+                <rect key="frame" x="0.0" y="0.0" width="460" height="360.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsu-mF-Pi5">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="90.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-vF-A4R">
+                                <rect key="frame" x="20" y="20" width="420" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70g-Op-4Ct">
+                                <rect key="frame" x="20" y="60" width="420" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90.5" id="Cmj-I4-u9u"/>
+                            <constraint firstAttribute="trailing" secondItem="iHJ-vF-A4R" secondAttribute="trailing" constant="20" id="DKY-bU-l2t"/>
+                            <constraint firstItem="iHJ-vF-A4R" firstAttribute="leading" secondItem="gsu-mF-Pi5" secondAttribute="leading" constant="20" id="bSc-wG-Wel"/>
+                            <constraint firstItem="70g-Op-4Ct" firstAttribute="leading" secondItem="gsu-mF-Pi5" secondAttribute="leading" constant="20" id="cUh-qi-RUU"/>
+                            <constraint firstAttribute="trailing" secondItem="70g-Op-4Ct" secondAttribute="trailing" constant="20" id="eFe-6q-rrc"/>
+                            <constraint firstItem="iHJ-vF-A4R" firstAttribute="top" secondItem="gsu-mF-Pi5" secondAttribute="top" constant="20" id="mFG-Rf-fHD"/>
+                            <constraint firstItem="70g-Op-4Ct" firstAttribute="top" secondItem="iHJ-vF-A4R" secondAttribute="bottom" constant="4" id="t3s-TZ-XiH"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-7j-btS">
+                        <rect key="frame" x="0.0" y="90.5" width="460" height="250"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="HXD-DF-NkH"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cp0-3w-Sk4">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Lz7-7j-btS" firstAttribute="top" secondItem="gsu-mF-Pi5" secondAttribute="bottom" id="5G2-jj-JL4"/>
+                    <constraint firstAttribute="bottom" secondItem="Lz7-7j-btS" secondAttribute="bottom" id="Kw5-uN-AMy"/>
+                    <constraint firstAttribute="trailing" secondItem="Lz7-7j-btS" secondAttribute="trailing" id="ONl-3c-tTX"/>
+                    <constraint firstItem="gsu-mF-Pi5" firstAttribute="top" secondItem="axt-I0-8cR" secondAttribute="top" id="aqV-r5-nD6"/>
+                    <constraint firstAttribute="trailing" secondItem="gsu-mF-Pi5" secondAttribute="trailing" id="kce-yD-L0g"/>
+                    <constraint firstItem="gsu-mF-Pi5" firstAttribute="leading" secondItem="axt-I0-8cR" secondAttribute="leading" id="myF-cf-yzG"/>
+                    <constraint firstItem="Lz7-7j-btS" firstAttribute="leading" secondItem="axt-I0-8cR" secondAttribute="leading" id="sPX-TT-BWM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="Lz7-7j-btS" id="NHZ-gh-6wk"/>
+                <outlet property="collectionViewHeightConstraint" destination="HXD-DF-NkH" id="13v-LQ-DH3"/>
+                <outlet property="subtitleLabel" destination="70g-Op-4Ct" id="zED-Kb-a0h"/>
+                <outlet property="titleLabel" destination="iHJ-vF-A4R" id="qXY-9N-ic2"/>
+            </connections>
+            <point key="canvasLocation" x="617.60000000000002" y="244.22788605697153"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -13,17 +13,19 @@ import RxCocoa
 #endif
 
 class FeaturedViewController: UIViewController {
-
-    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var mainView: FeaturedMainView!
+    
+    var viewModel: FeaturedViewModel?
+    private let disposeBag = DisposeBag()
     
     // MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -32,7 +34,33 @@ class FeaturedViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     // MARK: - Private
-
+    
+    private func bindViewModel() {
+        let input = FeaturedViewModel.Input(ready: rx.viewWillAppear.asDriver(),
+                                            selected: mainView.selectedIndex.asDriver(onErrorJustReturn: (0, 0)))
+        
+        let output = viewModel?.transform(input: input)
+        
+        output?.loading
+            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+            .disposed(by: disposeBag)
+        
+        output?.results
+            .drive(onNext: { [weak self] carouselViewModel in
+                guard let strongSelf = self else {
+                    dLog("Unexpectedly found nil")
+                    return
+                }
+                strongSelf.mainView.setDataSource(carouselViewModel)
+                strongSelf.mainView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        output?.selected
+            .drive()
+            .disposed(by: disposeBag)
+    }
+    
 }
