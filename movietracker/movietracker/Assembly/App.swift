@@ -14,11 +14,23 @@ final class App {
     
     func startInterface(in window: UIWindow) {
         let featuredNavigationController = UINavigationController()
+        let featuredViewModel = FeaturedViewModel(dependencies: FeaturedViewModel.Dependencies(api: ApiThemoviedb()))
         let featuredViewController = UIStoryboard.main.featuredViewController
-        
+        featuredViewController.viewModel = featuredViewModel
         featuredNavigationController.viewControllers = [featuredViewController]
         
-        window.rootViewController = featuredViewController
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.barTintColor = Constants.uiMainTabBarBarTintColor
+        tabBarController.tabBar.tintColor = Constants.uiMainTabBarTintColor
+        
+        featuredNavigationController.tabBarItem = UITabBarItem(title: "Featured", image: nil, selectedImage: nil)
+        featuredNavigationController.viewControllers = [featuredViewController]
+        
+        tabBarController.viewControllers = [
+            featuredNavigationController
+        ]
+
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }
 }
