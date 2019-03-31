@@ -43,15 +43,15 @@ final class FeaturedViewModel: ViewModelType {
             .asObservable()
             .flatMap {
                 Observable.zip(self.dependencies.api.fetchPopularMovies(),
-                               self.dependencies.api.fetchPopularShows())
+                               self.dependencies.api.fetchPopularTVShows())
                     .trackActivity(activityIndicator)
             }
             .share()
         
-        let mappedResults = results
-            .map { movies, shows in
+//        let mappedResults = results
+            .map { movies, tvShows in
                 return [CarouselViewModel(movies: movies),
-                        CarouselViewModel(movies: shows)]
+                        CarouselViewModel(tvShows: tvShows)]
                     .compactMap { $0 }
             }
             .asDriver(onErrorJustReturn: [])

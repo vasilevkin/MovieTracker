@@ -29,4 +29,17 @@ extension CarouselViewModel {
         }
     }
     
+    init?(tvShows: [TVShow]?) {
+        guard let tvShows = tvShows else {
+            dLog("Unexpectedly found nil")
+            return nil
+        }
+        self.title = "TV shows"
+        self.subtitle = "Recent updates on popular TV shows"
+        self.items = tvShows
+            .map {
+                CarouselItemViewModel(tvShow: $0)
+        }
+    }
+
 }

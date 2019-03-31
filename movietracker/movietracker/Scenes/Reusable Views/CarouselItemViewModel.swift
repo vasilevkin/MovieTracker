@@ -25,4 +25,13 @@ extension CarouselItemViewModel {
         }
     }
     
+    init(tvShow: TVShow) {
+        self.title = tvShow.name
+        self.subtitle = tvShow.firstAirDate ?? "n/a"
+        self.imageUrl = tvShow.posterPath
+            .flatMap {
+                "http://image.tmdb.org/t/p/w185/" + $0
+        }
+    }
+
 }
