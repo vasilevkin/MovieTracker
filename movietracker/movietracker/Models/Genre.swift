@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Data struct model for Genre
+ 
+ Detail description: https://developers.themoviedb.org/3/genres/get-movie-list
+ */
 struct Genre: Decodable {
     let genreId: Int
     let name: String

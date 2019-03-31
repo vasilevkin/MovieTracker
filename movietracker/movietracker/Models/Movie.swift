@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Data struct model for Movie
+ 
+ Detail description: https://developers.themoviedb.org/3/movies/get-movie-details
+ */
 struct Movie: Decodable {
     let adult: Bool?
     let backdropPath: String?
