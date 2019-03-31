@@ -31,6 +31,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
             .map { data -> [Movie]? in
                 guard let data = data,
                     let response = try? JSONDecoder().decode(MoviesResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
                         return nil
                 }
                 return response.results
@@ -43,6 +44,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
             .map { data -> Movie? in
                 guard let data = data,
                     let response = try? JSONDecoder().decode(Movie.self, from: data) else {
+                        dLog("Unexpectedly found nil")
                         return nil
                 }
                 return response
@@ -55,6 +57,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
             .map { data -> [Movie]? in
                 guard let data = data,
                     let response = try? JSONDecoder().decode(MoviesResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
                         return nil
                 }
                 
@@ -68,23 +71,41 @@ final class ApiThemoviedb: ApiThemoviedbService {
             .map { data -> String? in
                 guard let data = data,
                     let response = try? JSONDecoder().decode(AuthTokenResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
                         return nil
                 }
                 return response.requestToken
             }
             .flatMap { [weak self] (token: String?) -> Observable<Data?> in
                 guard let strongSelf = self,
-                    let token = token else { return Observable.just(nil) }
+                    let token = token else {
+                        dLog("Unexpectedly found nil")
+                        return Observable.just(nil)
+                }
                 return strongSelf.httpClient.post(url: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=\(strongSelf.constants.themoviedbApiKey)",
                     params: ["username": username, "password": password, "request_token": token])
             }
             .map { (data: Data?) -> Bool in
                 guard let data = data,
                     let response = try? JSONDecoder().decode(LoginResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
                         return false
                 }
                 return response.success
         }
     }
-    
+
+    func fetchPopularTVShows() -> Observable<[TVShow]?> {
+        return httpClient
+            .get(url: "https://api.themoviedb.org/3/discover/tv?api_key=\(constants.themoviedbApiKey)&language=en-US&sort_by=popularity.desc&page=1&include_null_first_air_dates=false")
+            .map { data -> [TVShow]? in
+                guard let data = data,
+                    let response = try? JSONDecoder().decode(TVShowsResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
+                        return nil
+                }
+                return response.results
+        }
+    }
+
 }

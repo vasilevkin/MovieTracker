@@ -23,3 +23,7 @@ struct LoginResponse: Decodable {
 struct MoviesResponse: Decodable {
     let results: [Movie]
 }
+
+struct TVShowsResponse: Decodable {
+    let results: [TVShow]
+}
