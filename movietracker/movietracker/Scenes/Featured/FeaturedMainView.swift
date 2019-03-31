@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 #endif
+import Nuke
 
 final class FeaturedMainView: UIView {
     
@@ -138,7 +139,7 @@ extension FeaturedMainView: UICollectionViewDataSource {
         
         if let urlString = item.imageUrl, let url = URL(string: urlString) {
             // Load image using Nuke
-//            Nuke.loadImage(with: url, into: cell.imageView)
+            Nuke.loadImage(with: url, into: cell.imageView)
         }
         
         return cell
