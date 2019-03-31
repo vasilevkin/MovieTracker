@@ -14,8 +14,11 @@ final class App {
     
     func startInterface(in window: UIWindow) {
         let featuredNavigationController = UINavigationController()
-        let featuredViewModel = FeaturedViewModel(dependencies: FeaturedViewModel.Dependencies(api: ApiThemoviedb()))
+        let featuredCoordinator = FeaturedCoordinator(navigationController: featuredNavigationController)
+        let featuredViewModel = FeaturedViewModel(dependencies:
+            FeaturedViewModel.Dependencies(api: ApiThemoviedb(), coordinator: featuredCoordinator))
         let featuredViewController = UIStoryboard.main.featuredViewController
+
         featuredViewController.viewModel = featuredViewModel
         featuredNavigationController.viewControllers = [featuredViewController]
         
