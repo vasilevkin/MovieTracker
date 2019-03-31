@@ -18,9 +18,9 @@ import RxCocoa
 final class ApiThemoviedb: ApiThemoviedbService {
     
     private let httpClient: HTTPClientService
-    private let constants: Constants
+    private let constants: Secret
     
-    init(httpClient: HTTPClientService = HTTPClient(), constants: Constants = Constants()) {
+    init(httpClient: HTTPClientService = HTTPClient(), constants: Secret = Secret()) {
         self.httpClient = httpClient
         self.constants = constants
     }

@@ -7,15 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 /**
- Contains all sensitive secret constants.
- Should not be committed to repo with data in plain text.
- Repo only contains a crypted version of this file.
- 
- This is just a data struct to show data format.
- Actual data is crypted.
+ All public constants in plain text.
  */
 struct Constants {
-    let themoviedbApiKey = "PUT_YOUR_KEY_HERE"
+    
+    // UI Constants
+    static let uiMainTabBarBarTintColor = UIColor(red: 35/255, green: 35/255, blue: 35/255, alpha: 1.0)
+    static let uiMainTabBarTintColor = UIColor.white
+    
+    static let uiCarouselSectionTableViewCellWidth: CGFloat = 140
+    static let uiCarouselSectionTableViewCellHeight: CGFloat = 235
+    
+    static let uiCollectionViewContentInset: CGFloat = 20
+    
+    static let uiMovieCellMaxHeight: CGFloat = 400
+    
+    static let uiFeaturedMainViewItemsPerRow: CGFloat = 4
+    
 }
