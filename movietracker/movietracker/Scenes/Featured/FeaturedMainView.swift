@@ -139,7 +139,17 @@ extension FeaturedMainView: UICollectionViewDataSource {
         
         if let urlString = item.imageUrl, let url = URL(string: urlString) {
             // Load image using Nuke
-            Nuke.loadImage(with: url, into: cell.imageView)
+            let options = ImageLoadingOptions(
+                placeholder: UIImage(named: "placeholder"),
+                transition: .fadeIn(duration: 1.0),
+                failureImage: UIImage(named: "failure_image"),
+                contentModes: .init(
+                    success: .scaleAspectFill,
+                    failure: .center,
+                    placeholder: .center
+                )
+            )
+            Nuke.loadImage(with: url, options: options, into: cell.imageView)
         }
         
         return cell

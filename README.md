@@ -69,6 +69,7 @@ It plays movie trailers from YouTube.
 * Unit testing
 * UI testing
 * Debug print log
+* Asynchronous image loading with transition animation
 
 ## Getting started
 
@@ -92,6 +93,7 @@ $ open movietracker.xcworkspace
 
 - [RxSwift](https://github.com/ReactiveX/RxSwift) - Reactive Programming in Swift 
 - [SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions.
+- [Nuke](https://github.com/kean/Nuke) - Powerful image loading and caching system
 
 
 ## Related blog posts:
