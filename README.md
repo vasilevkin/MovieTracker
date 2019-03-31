@@ -89,6 +89,10 @@ $ cd MovieTracker/movietracker/
 $ open movietracker.xcworkspace
 ```
 
+#### App login
+🔒 Use your themoviedb.org credentials.
+🔒 Or a test user, username `mtios` and password `test`
+
 ### Built With
 
 - [RxSwift](https://github.com/ReactiveX/RxSwift) - Reactive Programming in Swift 
