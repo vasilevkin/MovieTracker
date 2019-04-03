@@ -10,6 +10,20 @@ def useSwiftLint
   :execution_position => :before_compile
 end
 
+def decryptSecretConstants
+  script_phase :name => 'Decrypt Secret constants',
+  :script => '#check if we run debug build
+  if [ "${CONFIGURATION}" = "Debug" ]; then
+    echo "============================= debug build ============================="
+    #check if secret.sh exists
+    if [ -f "$SRCROOT/movietracker/Supporting Files/scripts/secret.sh" ]; then
+      echo "============================= Decrypt secret keys ============================="
+      "$SRCROOT/movietracker/Supporting Files/scripts/secret.sh"
+    fi
+  fi',
+  :execution_position => :before_compile
+end
+
 def commonPods
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
@@ -22,6 +36,7 @@ target 'movietracker' do
     platform :ios, '11.0'
     project 'movietracker'
 
+    decryptSecretConstants
     useSwiftLint
 
     # Pods for movietracker

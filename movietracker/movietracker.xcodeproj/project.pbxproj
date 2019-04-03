@@ -35,6 +35,7 @@
 		868027C82253D9A000E289CE /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868027C72253D9A000E289CE /* MovieDetailViewModel.swift */; };
 		868027CA2253DE4000E289CE /* MovieDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868027C92253DE4000E289CE /* MovieDetailData.swift */; };
 		868027CC2253E0C500E289CE /* MovieDetailCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868027CB2253E0C500E289CE /* MovieDetailCoordinatable.swift */; };
+		86837B0E225540F1007B057F /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 86837B0D225540F1007B057F /* scripts */; };
 		86842B3C224E93600060B7EE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86842B3B224E93600060B7EE /* ViewModelType.swift */; };
 		86842B3E224E94240060B7EE /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86842B3D224E94240060B7EE /* CarouselViewModel.swift */; };
 		86842B40224E95120060B7EE /* CarouselItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86842B3F224E95120060B7EE /* CarouselItemViewModel.swift */; };
@@ -116,6 +117,7 @@
 		868027C72253D9A000E289CE /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		868027C92253DE4000E289CE /* MovieDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailData.swift; sourceTree = "<group>"; };
 		868027CB2253E0C500E289CE /* MovieDetailCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCoordinatable.swift; sourceTree = "<group>"; };
+		86837B0D225540F1007B057F /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		86842B3B224E93600060B7EE /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		86842B3D224E94240060B7EE /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		86842B3F224E95120060B7EE /* CarouselItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemViewModel.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		867F63DA224783C800D2524D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86837B0D225540F1007B057F /* scripts */,
 				867F63DC2247845100D2524D /* Extensions */,
 				865B670E2247CF29002ECD99 /* Utils */,
 			);
@@ -401,6 +404,7 @@
 			buildPhases = (
 				B9B9BABAF17C63D96A2B0618 /* [CP] Check Pods Manifest.lock */,
 				829A1CCFFF1FD490847CDC79 /* [CP-User] Swift Lint Check */,
+				6888007B9489B153B892DD69 /* [CP-User] Decrypt Secret constants */,
 				860C39BC22460E8F008281D1 /* Sources */,
 				860C39BD22460E8F008281D1 /* Frameworks */,
 				860C39BE22460E8F008281D1 /* Resources */,
@@ -507,6 +511,7 @@
 				869B8C7D224F3C8500417E3E /* CarouselSectionTableViewCell.xib in Resources */,
 				860C39D122460E91008281D1 /* LaunchScreen.storyboard in Resources */,
 				860C39CE22460E91008281D1 /* Assets.xcassets in Resources */,
+				86837B0E225540F1007B057F /* scripts in Resources */,
 				869B8C81224F41B900417E3E /* FeaturedMainView.xib in Resources */,
 				860C39C922460E8F008281D1 /* Main.storyboard in Resources */,
 				86E3EE6F22528C8800177C22 /* MovieDetailHeaderView.xib in Resources */,
@@ -552,6 +557,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6888007B9489B153B892DD69 /* [CP-User] Decrypt Secret constants */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] Decrypt Secret constants";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#check if we run debug build\n  if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    echo \"============================= debug build =============================\"\n    #check if secret.sh exists\n    if [ -f \"$SRCROOT/movietracker/Supporting Files/scripts/secret.sh\" ]; then\n      echo \"============================= Decrypt secret keys =============================\"\n      \"$SRCROOT/movietracker/Supporting Files/scripts/secret.sh\"\n    fi\n  fi";
 			showEnvVarsInLog = 0;
 		};
 		829A1CCFFF1FD490847CDC79 /* [CP-User] Swift Lint Check */ = {
@@ -864,6 +888,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				INFOPLIST_FILE = movietracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,6 +907,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				INFOPLIST_FILE = movietracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

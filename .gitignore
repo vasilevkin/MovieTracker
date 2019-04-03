@@ -1,3 +1,9 @@
+# Secret constants and scripts for encryption and decryption
+Secret.swift
+encryptSecret.sh
+secret.sh
+
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
