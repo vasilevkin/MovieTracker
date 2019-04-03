@@ -7,6 +7,10 @@
 //
 
 import UIKit
+#if !RX_NO_MODULE
+import RxSwift
+import RxCocoa
+#endif
 
 class MovieDetailViewController: UIViewController {
     
@@ -15,7 +19,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var posterImageView: GradientImageView!
     @IBOutlet weak var backButton: UIButton!
 
-    var viewModel: MovieDetailViewModel!
+    var viewModel: MovieDetailViewModel?
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -23,7 +27,6 @@ class MovieDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
