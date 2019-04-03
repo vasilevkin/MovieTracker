@@ -465,13 +465,16 @@
 				TargetAttributes = {
 					860C39BF22460E8F008281D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					860C39D622460E92008281D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 860C39BF22460E8F008281D1;
 					};
 					860C39E122460E92008281D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 860C39BF22460E8F008281D1;
 					};
 				};
@@ -870,7 +873,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -888,7 +891,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -908,7 +911,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/movietracker.app/movietracker";
 			};
@@ -929,7 +932,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/movietracker.app/movietracker";
 			};
@@ -949,7 +952,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = movietracker;
 			};
@@ -969,7 +972,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyVasilevkin.movietrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = movietracker;
 			};
