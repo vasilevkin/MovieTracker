@@ -16,6 +16,10 @@ final class FeaturedCoordinator: FeaturedCoordinatable {
         self.navigationController = navigationController
     }
     
+    func start() {
+        
+    }
+    
     func navigateToMovieDetailScene(with movieId: Int, api: ApiThemoviedbService) {
         
     }

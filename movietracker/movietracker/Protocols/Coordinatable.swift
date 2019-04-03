@@ -26,4 +26,9 @@ protocol Coordinatable {
      - Parameter navigationController: container view controller
      */
     init(navigationController: UINavigationController)
+    
+    /**
+     An entry point for coordinator to begin work and navigation.
+     */
+    func start()
 }
