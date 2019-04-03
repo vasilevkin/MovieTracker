@@ -1,10 +1,8 @@
 PODS:
   - Nuke (7.5.2)
-  - RxAtomic (4.4.2)
-  - RxCocoa (4.4.2):
+  - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxSwift (4.4.2):
-    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
@@ -16,16 +14,14 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nuke
-    - RxAtomic
     - RxCocoa
     - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
-  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
-  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
-  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
 PODFILE CHECKSUM: 482f57a66fde017a804e7b2064180e12c46b2a10
