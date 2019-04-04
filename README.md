@@ -71,9 +71,9 @@ It plays movie trailers from YouTube.
 * [Debug print log](https://svasilevkin.wordpress.com/2019/03/24/debug-print-log/)
 * Asynchronous image loading with transition animation
 * Continuous integration / Continuous Delivery
-* Xcode Custom Paths
-* [Protect private info in open source project]
-
+* [Xcode Custom Paths](https://svasilevkin.wordpress.com/2019/04/03/xcode-custom-paths/)
+* [Protect private info in open source project](https://svasilevkin.wordpress.com/2019/04/03/protect-private-info-in-open-source-project/)
+ 
 
 ## Getting started
 
@@ -109,9 +109,9 @@ $ open movietracker.xcworkspace
 
 * [New project starts. Welcome Movie Tracker - trailers!](https://svasilevkin.wordpress.com/2019/03/23/new-project-starts-welcome-movie-tracker-trailers/)
 * [Debug print log](https://svasilevkin.wordpress.com/2019/03/24/debug-print-log/)
-* [Xcode Custom Paths]
-* [Protect private info in open source project]
-
+* [Xcode Custom Paths](https://svasilevkin.wordpress.com/2019/04/03/xcode-custom-paths/)
+* [Protect private info in open source project](https://svasilevkin.wordpress.com/2019/04/03/protect-private-info-in-open-source-project/)
+ 
 ## Author
 
 Sergey Vasilevkin - [Contact me](https://svasilevkin.wordpress.com/contact-me/)
