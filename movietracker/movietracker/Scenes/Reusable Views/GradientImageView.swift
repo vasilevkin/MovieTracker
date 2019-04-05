@@ -9,13 +9,26 @@
 import UIKit
 
 class GradientImageView: UIImageView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override init(image: UIImage?) {
+        super.init(image: image)
+        setup()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        layer.backgroundColor = Constants.uiGradientImageViewBackgroundColor.cgColor
+        layer.opacity = Constants.uiGradientImageViewOpacity
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = Constants.uiGradientImageViewGradientColors
+        gradient.locations = Constants.uiGradientImageViewGradientLocations
+        layer.mask = gradient
+    }
+    
 }

@@ -27,4 +27,12 @@ struct Constants {
     
     static let uiFeaturedMainViewItemsPerRow: CGFloat = 4
     
+    static let uiGradientImageViewBackgroundColor = UIColor.black
+    static let uiGradientImageViewOpacity: Float = 0.1
+    static let uiGradientImageViewGradientColors = [UIColor.clear.cgColor,
+                                                    UIColor(red: 35/255, green: 35/255, blue: 35/255, alpha: 1.0).cgColor,
+                                                    UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0).cgColor,
+                                                    UIColor.clear.cgColor]
+    static let uiGradientImageViewGradientLocations: [NSNumber] = [0, 0.1, 0.9, 1]
+    
 }

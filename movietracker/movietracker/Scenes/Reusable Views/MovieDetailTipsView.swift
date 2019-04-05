@@ -14,9 +14,37 @@ class MovieDetailTipsView: UIView {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet var contentView: UIView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func configure(with voteCount: String,
+                   status: String) {
+        self.voteCountLabel.text = voteCount
+        self.statusLabel.text = status
+    }
+    
+    private func setup() {
+        Bundle.main.loadNibNamed("MovieDetailTipsView", owner: self, options: nil)
+        addSubview(contentView)
+        
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+
+}
+
+extension MovieDetailTipsView {
+    
+    func configure(with data: MovieDetailData) {
+        configure(with: data.voteCount ?? "",
+                  status: data.status ?? "")
+    }
+
 }
