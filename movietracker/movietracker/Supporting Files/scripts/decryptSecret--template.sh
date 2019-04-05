@@ -19,3 +19,17 @@ echo "============================= Decryption of secret keys in script is compl
 
 # Actual encryptSecret and decryptSecret containing password should be added to .gitignore
 # and never published in the public domain.
+
+
+
+# To ignore the file locally, regardless of its status:
+#   git update-index --assume-unchanged Secret.swift
+#
+# To revert
+# If you want make changes in Secret.swift and commit it to repo:
+#   git update-index --no-assume-unchanged Secret.swift
+#
+# Revert All
+# Do not ignore any changes locally, check status for all local files in repo,
+# regardless of file paths:
+#   git update-index --really-refresh

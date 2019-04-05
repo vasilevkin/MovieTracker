@@ -73,7 +73,8 @@ It plays movie trailers from YouTube.
 * Continuous integration / Continuous Delivery
 * [Xcode Custom Paths](https://svasilevkin.wordpress.com/2019/04/03/xcode-custom-paths/)
 * [Protect private info in open source project](https://svasilevkin.wordpress.com/2019/04/03/protect-private-info-in-open-source-project/)
- 
+* Ignore files which are in git repository already
+
 
 ## Getting started
 
