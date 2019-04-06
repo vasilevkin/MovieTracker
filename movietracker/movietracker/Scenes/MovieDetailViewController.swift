@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 #endif
+import Nuke
 
 class MovieDetailViewController: UIViewController {
     
@@ -24,18 +25,44 @@ class MovieDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    */
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    private func bindViewModel() {
+        let input = MovieDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
+                                               backTrigger: backButton.rx.tap.asDriver())
+        
+        let output = viewModel?.transform(input: input)
+        
+        output?.data
+            .drive(onNext: { [weak self] data in
+                guard let data = data,
+                    let strongSelf = self else {
+                        dLog("Unexpectedly found nil")
+                        return
+                }
+                strongSelf.headerView.configure(with: data)
+                strongSelf.tipsView.configure(with: data)
+
+                if let urlString = data.posterPath, let url = URL(string: urlString) {
+                    // Load image using Nuke
+                    Nuke.loadImage(with: url, into: strongSelf.posterImageView)
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        output?.back
+            .drive()
+            .disposed(by: disposeBag)
+    }
 
 }

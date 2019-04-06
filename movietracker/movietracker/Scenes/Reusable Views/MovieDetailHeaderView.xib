@@ -10,7 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailHeaderView" customModule="movietracker" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailHeaderView" customModule="movietracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Ca6-2j-eGP" id="GC0-Ov-ehO"/>
+                <outlet property="genresLabel" destination="WPg-L2-vLM" id="3fH-Dn-gye"/>
+                <outlet property="overviewLabel" destination="FKe-8S-QEc" id="efE-SA-SIQ"/>
+                <outlet property="releaseDateLabel" destination="eIX-YY-0Lx" id="aom-gI-6pw"/>
+                <outlet property="runtimeLabel" destination="4au-aX-p3t" id="duA-GL-2KL"/>
+                <outlet property="titleLabel" destination="q7t-MJ-EQQ" id="Gen-9l-VGl"/>
+                <outlet property="voteAverageLabel" destination="b40-K2-goU" id="WM5-c8-xci"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Ca6-2j-eGP">
             <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
