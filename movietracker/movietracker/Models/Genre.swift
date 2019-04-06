@@ -16,4 +16,9 @@ import Foundation
 struct Genre: Decodable {
     let genreId: Int
     let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case genreId = "id"
+        case name = "name"
+    }
 }
