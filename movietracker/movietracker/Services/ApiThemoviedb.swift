@@ -39,15 +39,22 @@ final class ApiThemoviedb: ApiThemoviedbService {
     }
     
     func fetchMovieDetails(for movieId: Int) -> Observable<Movie?> {
+        dLog("movieId = \(movieId)")
+        
         return httpClient
             .get(url: "https://api.themoviedb.org/3/movie/\(movieId)?api_key=\(constants.themoviedbApiKey)&language=en-US)")
             .map { data -> Movie? in
-                guard let data = data,
-                    let response = try? JSONDecoder().decode(Movie.self, from: data) else {
-                        dLog("Unexpectedly found nil")
-                        return nil
+                guard let data = data else {
+                    dLog("Unexpectedly found nil")
+                    return nil
                 }
-                return response
+                do {
+                    let response = try JSONDecoder().decode(Movie.self, from: data)
+                    return response
+                } catch {
+                    dLog("JSONDecoder decode error: \(error)")
+                    return nil
+                }
         }
     }
     
