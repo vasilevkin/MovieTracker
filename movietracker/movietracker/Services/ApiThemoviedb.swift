@@ -16,7 +16,7 @@ import RxCocoa
  Concrete implementation for a ApiThemoviedbService protocol
  */
 final class ApiThemoviedb: ApiThemoviedbService {
-    
+
     private let httpClient: HTTPClientService
     private let constants: Secret
     
@@ -26,7 +26,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
     }
     
     // MARK: - Movies
-    
+
     func fetchPopularMovies() -> Observable<[Movie]?> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/discover/movie?api_key=\(constants.themoviedbApiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false")
@@ -59,7 +59,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 }
         }
     }
-    
+
     func searchMovies(for query: String) -> Observable<[Movie]?> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/search/movie?api_key=\(constants.themoviedbApiKey)&language=en-US&query=\(query)&page=1&include_adult=false")
@@ -88,7 +88,7 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 return response.results
         }
     }
-    
+
     func fetchTVShowDetails(for tvShowId: Int) -> Observable<TVShow?> {
         dLog("tvShowId = \(tvShowId)")
         
@@ -108,9 +108,14 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 }
         }
     }
-    
+
+    func searchTVShows(for query: String) -> Observable<[TVShow]?> {
+
+        return Observable.empty()
+    }
+
     // MARK: - login
-    
+
     func login(with username: String, and password: String) -> Observable<Bool> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/authentication/token/new?api_key=\(constants.themoviedbApiKey)")
@@ -140,5 +145,5 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 return response.success
         }
     }
-    
+
 }
