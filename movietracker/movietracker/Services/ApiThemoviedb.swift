@@ -25,6 +25,8 @@ final class ApiThemoviedb: ApiThemoviedbService {
         self.constants = constants
     }
     
+    // MARK: - Movies
+    
     func fetchPopularMovies() -> Observable<[Movie]?> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/discover/movie?api_key=\(constants.themoviedbApiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false")
@@ -72,6 +74,43 @@ final class ApiThemoviedb: ApiThemoviedbService {
         }
     }
     
+    // MARK: - TVShows
+    
+    func fetchPopularTVShows() -> Observable<[TVShow]?> {
+        return httpClient
+            .get(url: "https://api.themoviedb.org/3/discover/tv?api_key=\(constants.themoviedbApiKey)&language=en-US&sort_by=popularity.desc&page=1&include_null_first_air_dates=false")
+            .map { data -> [TVShow]? in
+                guard let data = data,
+                    let response = try? JSONDecoder().decode(TVShowsResponse.self, from: data) else {
+                        dLog("Unexpectedly found nil")
+                        return nil
+                }
+                return response.results
+        }
+    }
+    
+    func fetchTVShowDetails(for tvShowId: Int) -> Observable<TVShow?> {
+        dLog("tvShowId = \(tvShowId)")
+        
+        return httpClient
+            .get(url: "https://api.themoviedb.org/3/tv/\(tvShowId)?api_key=\(constants.themoviedbApiKey)&language=en-US)")
+            .map { data -> TVShow? in
+                guard let data = data else {
+                    dLog("Unexpectedly found nil")
+                    return nil
+                }
+                do {
+                    let response = try JSONDecoder().decode(TVShow.self, from: data)
+                    return response
+                } catch {
+                    dLog("JSONDecoder decode error: \(error)")
+                    return nil
+                }
+        }
+    }
+    
+    // MARK: - login
+    
     func login(with username: String, and password: String) -> Observable<Bool> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/authentication/token/new?api_key=\(constants.themoviedbApiKey)")
@@ -101,18 +140,5 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 return response.success
         }
     }
-
-    func fetchPopularTVShows() -> Observable<[TVShow]?> {
-        return httpClient
-            .get(url: "https://api.themoviedb.org/3/discover/tv?api_key=\(constants.themoviedbApiKey)&language=en-US&sort_by=popularity.desc&page=1&include_null_first_air_dates=false")
-            .map { data -> [TVShow]? in
-                guard let data = data,
-                    let response = try? JSONDecoder().decode(TVShowsResponse.self, from: data) else {
-                        dLog("Unexpectedly found nil")
-                        return nil
-                }
-                return response.results
-        }
-    }
-
+    
 }
