@@ -10,6 +10,8 @@
  Service communicates with themoviedb.org api
  Consists of separate providers
  */
-protocol ApiThemoviedbService: ApiThemoviedbMoviesProvider, ApiThemoviedbAuthProvider {
+protocol ApiThemoviedbService: ApiThemoviedbMoviesProvider,
+                               ApiThemoviedbTVShowsProvider,
+                               ApiThemoviedbAuthProvider {
     
 }
