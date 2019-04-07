@@ -41,5 +41,24 @@ extension MovieDetailData {
             .flatMap { String($0) } ?? ""
         self.status = movie.status ?? ""
     }
-    
+
+    init(tvShow: TVShow) {
+        self.title = tvShow.name
+        self.releaseDate = tvShow.firstAirDate
+        self.overview = tvShow.overview
+        self.genres = tvShow.genres
+            .flatMap {
+                $0.map { $0.name }
+                    .prefix(2)
+                    .joined(separator: ", ")
+            } ?? ""
+        self.runtime = "s:\(tvShow.numberOfSeasons ?? 0) e:\(tvShow.numberOfEpisodes ?? 0)"
+        self.voteAverage = tvShow.voteAverage
+            .flatMap { String($0) } ?? ""
+        self.posterPath = tvShow.posterPath.flatMap { "http://image.tmdb.org/t/p/w780/" + $0 }
+        self.voteCount = tvShow.voteCount
+            .flatMap { String($0) } ?? ""
+        self.status = tvShow.status ?? ""
+    }
+
 }

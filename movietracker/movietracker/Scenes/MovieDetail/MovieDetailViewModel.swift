@@ -11,6 +11,11 @@ import RxSwift
 import RxCocoa
 #endif
 
+enum ItemDetailType {
+    case movie
+    case tvShow
+}
+
 final class MovieDetailViewModel: ViewModelType {
     
     struct Input {
@@ -24,6 +29,7 @@ final class MovieDetailViewModel: ViewModelType {
     }
     
     struct Dependencies {
+        let itemDetailType: ItemDetailType
         let movieId: Int
         let api: ApiThemoviedb
         let coordinator: MovieDetailCoordinatable
@@ -36,23 +42,8 @@ final class MovieDetailViewModel: ViewModelType {
     }
     
     func transform(input: MovieDetailViewModel.Input) -> MovieDetailViewModel.Output {
-        let data = input
-            .ready
-            .asObservable()
-            .flatMap { _ in
-                self.dependencies.api.fetchMovieDetails(for: self.dependencies.movieId)
-            }
-            .map { movie -> MovieDetailData? in
-                guard let movie = movie else {
-                    dLog("Unexpectedly found nil")
-                    return nil
-                }
-                return MovieDetailData(movie: movie)
-            }
-            .asDriver(onErrorJustReturn: nil)
         
-        let back = input
-            .backTrigger
+        let back = input.backTrigger
             .do(onNext: { [weak self] _ in
                 guard let strongSelf = self else {
                     dLog("Unexpectedly found nil")
@@ -61,7 +52,42 @@ final class MovieDetailViewModel: ViewModelType {
                 strongSelf.dependencies.coordinator.goBack()
             })
         
-        return Output(data: data, back: back)
+        switch self.dependencies.itemDetailType {
+            
+        case .movie:
+            let data = input.ready
+                .asObservable()
+                .flatMap { _ in
+                    self.dependencies.api.fetchMovieDetails(for: self.dependencies.movieId)
+                }
+                .map { movie -> MovieDetailData? in
+                    guard let movie = movie else {
+                        dLog("Unexpectedly found nil")
+                        return nil
+                    }
+                    return MovieDetailData(movie: movie)
+                }
+                .asDriver(onErrorJustReturn: nil)
+            
+            return Output(data: data, back: back)
+            
+        case .tvShow:
+            let data = input.ready
+                .asObservable()
+                .flatMap { _ in
+                    self.dependencies.api.fetchTVShowDetails(for: self.dependencies.movieId)
+                }
+                .map { tvShow -> MovieDetailData? in
+                    guard let tvShow = tvShow else {
+                        dLog("Unexpectedly found nil")
+                        return nil
+                    }
+                    return MovieDetailData(tvShow: tvShow)
+                }
+                .asDriver(onErrorJustReturn: nil)
+            
+            return Output(data: data, back: back)
+        }
     }
     
 }
