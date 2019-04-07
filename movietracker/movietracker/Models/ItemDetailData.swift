@@ -1,5 +1,5 @@
 //
-//  MovieDetailData.swift
+//  ItemDetailData.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 02/04/2019.
@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct MovieDetailData {
+/**
+ Data struct model for Item details
+
+ Can be initialized with:
+ - Movie
+ - TVShow
+ */
+struct ItemDetailData {
     let title: String
     let releaseDate: String?
     let overview: String?
@@ -20,7 +27,7 @@ struct MovieDetailData {
     let status: String?
 }
 
-extension MovieDetailData {
+extension ItemDetailData {
     
     init(movie: Movie) {
         self.title = movie.title

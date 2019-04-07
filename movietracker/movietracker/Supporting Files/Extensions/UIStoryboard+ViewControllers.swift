@@ -25,11 +25,11 @@ extension UIStoryboard {
         return viewController
     }
     
-    var movieDetailViewController: MovieDetailViewController {
+    var itemDetailViewController: ItemDetailViewController {
         guard let viewController =
             UIStoryboard.main.instantiateViewController(withIdentifier:
-                "MovieDetailViewController") as? MovieDetailViewController else {
-                    fatalError("MovieDetailViewController couldn't be found in Storyboard file")
+                "ItemDetailViewController") as? ItemDetailViewController else {
+                    fatalError("ItemDetailViewController couldn't be found in Storyboard file")
         }
         return viewController
     }

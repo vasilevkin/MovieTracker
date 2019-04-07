@@ -1,5 +1,5 @@
 //
-//  MovieDetailCoordinatable.swift
+//  ItemDetailCoordinatable.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 02/04/2019.
@@ -9,9 +9,9 @@
 import Foundation
 
 /**
- Coordinator for all transitions on Movie Detail scene
+ Coordinator for all transitions on Item Detail scene
  */
-protocol MovieDetailCoordinatable: Coordinatable {
+protocol ItemDetailCoordinatable: Coordinatable {
     /**
      Transition back to the presenting View Controller
      */

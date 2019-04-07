@@ -1,5 +1,5 @@
 //
-//  MovieDetailViewController.swift
+//  ItemDetailViewController.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 01/04/2019.
@@ -13,14 +13,14 @@ import RxCocoa
 #endif
 import Nuke
 
-class MovieDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController {
     
-    @IBOutlet weak var headerView: MovieDetailHeaderView!
-    @IBOutlet weak var tipsView: MovieDetailTipsView!
+    @IBOutlet weak var headerView: ItemDetailHeaderView!
+    @IBOutlet weak var tipsView: ItemDetailTipsView!
     @IBOutlet weak var posterImageView: GradientImageView!
     @IBOutlet weak var backButton: UIButton!
 
-    var viewModel: MovieDetailViewModel?
+    var viewModel: ItemDetailViewModel?
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        let input = MovieDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
+        let input = ItemDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                                backTrigger: backButton.rx.tap.asDriver())
         
         let output = viewModel?.transform(input: input)

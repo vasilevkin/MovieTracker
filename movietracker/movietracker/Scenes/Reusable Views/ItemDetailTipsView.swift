@@ -1,5 +1,5 @@
 //
-//  MovieDetailTipsView.swift
+//  ItemDetailTipsView.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 02/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieDetailTipsView: UIView {
+class ItemDetailTipsView: UIView {
 
     @IBOutlet weak var voteCountLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -31,7 +31,7 @@ class MovieDetailTipsView: UIView {
     }
     
     private func setup() {
-        Bundle.main.loadNibNamed("MovieDetailTipsView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ItemDetailTipsView", owner: self, options: nil)
         addSubview(contentView)
         
         contentView.frame = self.bounds
@@ -40,9 +40,9 @@ class MovieDetailTipsView: UIView {
 
 }
 
-extension MovieDetailTipsView {
+extension ItemDetailTipsView {
     
-    func configure(with data: MovieDetailData) {
+    func configure(with data: ItemDetailData) {
         configure(with: data.voteCount ?? "",
                   status: data.status ?? "")
     }

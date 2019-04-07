@@ -1,5 +1,5 @@
 //
-//  MovieDetailHeaderView.swift
+//  ItemDetailHeaderView.swift
 //  movietracker
 //
 //  Created by Sergey Vasilevkin on 01/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieDetailHeaderView: UIView {
+class ItemDetailHeaderView: UIView {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
@@ -43,7 +43,7 @@ class MovieDetailHeaderView: UIView {
     }
     
     private func setup() {
-        Bundle.main.loadNibNamed("MovieDetailHeaderView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ItemDetailHeaderView", owner: self, options: nil)
         addSubview(contentView)
         
         contentView.frame = self.bounds
@@ -52,9 +52,9 @@ class MovieDetailHeaderView: UIView {
 
 }
 
-extension MovieDetailHeaderView {
+extension ItemDetailHeaderView {
     
-    func configure(with data: MovieDetailData) {
+    func configure(with data: ItemDetailData) {
         configure(with: data.title,
                   releaseDate: data.releaseDate ?? "",
                   genres: data.genres ?? "",
