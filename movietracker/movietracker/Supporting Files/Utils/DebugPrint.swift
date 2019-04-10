@@ -10,6 +10,6 @@ import Foundation
 
 func dLog(_ message: String, function: String = #function, line: Int = #line) {
     #if DEBUG
-    print("\(function).\(line): \(message)")
+    print("*** \(function).\(line): \(message)")
     #endif
 }
