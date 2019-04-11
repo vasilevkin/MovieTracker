@@ -13,13 +13,14 @@ import UIKit
  Based on UINavigationController.
  */
 protocol Coordinatable {
+
     /**
-     Navigation controller for current coordinator.
+     Navigation controller for a current coordinator.
      
      A container view controller that defines a stack-based scheme for navigating hierarchical content.
      */
     var navigationController: UINavigationController { get }
-    
+
     /**
      Required init
      
@@ -31,4 +32,32 @@ protocol Coordinatable {
      An entry point for coordinator to begin work and navigation.
      */
     func start()
+
+    /**
+     Transition back to the presenting View Controller
+     */
+    func goBack()
+
+}
+
+/**
+ Possible child coordinators for Coordinator.
+ */
+enum CoordinatorChild: Hashable {
+
+}
+
+/**
+ Parent delegate protocol for Coordinator.
+ Should be implemented by Parent Coordinator who invoked Coordinator.
+ */
+protocol CoordinatorDelegate: AnyObject {
+
+    /**
+     Invoked when the Coordinator is no longer needed
+     Coordinator never finishes by itself,
+     but calls its Parent Coordinator only when it finished work.
+     */
+    func coordinatorDidFinish()
+
 }
