@@ -14,7 +14,7 @@ import RxCocoa
 
 class FeaturedViewController: UIViewController {
     
-    @IBOutlet weak var mainView: FeaturedMainView!
+    @IBOutlet private weak var mainView: FeaturedMainView!
     
     var viewModel: FeaturedViewModel?
     private let disposeBag = DisposeBag()

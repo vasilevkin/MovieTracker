@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Nuke
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
     
     static func height(forWidth width: CGFloat) -> CGFloat {
         guard let sizingCell = UINib(nibName: String(describing: MovieCollectionViewCell.self), bundle: nil)
@@ -35,5 +36,28 @@ class MovieCollectionViewCell: UICollectionViewCell {
         
         return size.height
     }
-    
+
+    func updateTitleLabel(with text: String) {
+        self.titleLabel.text = text
+    }
+
+    func updateSubtitleLabel(with text: String) {
+        self.subtitleLabel.text = text
+    }
+
+    func imageViewLoadImage(with url: URL) {
+        // Load image using Nuke
+        let options = ImageLoadingOptions(
+            placeholder: UIImage(named: "placeholder"),
+            transition: .fadeIn(duration: 1.0),
+            failureImage: UIImage(named: "failure_image"),
+            contentModes: .init(
+                success: .scaleAspectFill,
+                failure: .center,
+                placeholder: .center
+            )
+        )
+        Nuke.loadImage(with: url, options: options, into: self.imageView)
+    }
+
 }

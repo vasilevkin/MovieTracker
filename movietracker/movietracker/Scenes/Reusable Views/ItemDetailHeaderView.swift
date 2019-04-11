@@ -10,13 +10,13 @@ import UIKit
 
 class ItemDetailHeaderView: UIView {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var genresLabel: UILabel!
-    @IBOutlet weak var runtimeLabel: UILabel!
-    @IBOutlet weak var voteAverageLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var releaseDateLabel: UILabel!
+    @IBOutlet private weak var genresLabel: UILabel!
+    @IBOutlet private weak var runtimeLabel: UILabel!
+    @IBOutlet private weak var voteAverageLabel: UILabel!
+    @IBOutlet private weak var overviewLabel: UILabel!
+    @IBOutlet private var contentView: UIView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +41,7 @@ class ItemDetailHeaderView: UIView {
         voteAverageLabel.text = voteAverage
         overviewLabel.text = overview
     }
-    
+
     private func setup() {
         Bundle.main.loadNibNamed("ItemDetailHeaderView", owner: self, options: nil)
         addSubview(contentView)

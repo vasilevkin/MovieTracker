@@ -11,7 +11,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 #endif
-import Nuke
 
 final class FeaturedMainView: UIView {
     
@@ -78,9 +77,10 @@ extension FeaturedMainView: UITableViewDataSource {
                     return UITableViewCell()
         }
         let carouselData = data[indexPath.row]
-        cell.titleLabel.text = carouselData.title
-        cell.subtitleLabel.text = carouselData.subtitle
-        
+
+        cell.updateTitleLabel(with: carouselData.title)
+        cell.updateSubtitleLabel(with: carouselData.subtitle)
+
         return cell
     }
     
@@ -133,23 +133,12 @@ extension FeaturedMainView: UICollectionViewDataSource {
                     return UICollectionViewCell()
         }
         let item = data[collectionView.tag].items[indexPath.item]
-        
-        cell.titleLabel.text = item.title
-        cell.subtitleLabel.text = item.subtitle
-        
+
+        cell.updateTitleLabel(with: item.title)
+        cell.updateSubtitleLabel(with: item.subtitle)
+
         if let urlString = item.imageUrl, let url = URL(string: urlString) {
-            // Load image using Nuke
-            let options = ImageLoadingOptions(
-                placeholder: UIImage(named: "placeholder"),
-                transition: .fadeIn(duration: 1.0),
-                failureImage: UIImage(named: "failure_image"),
-                contentModes: .init(
-                    success: .scaleAspectFill,
-                    failure: .center,
-                    placeholder: .center
-                )
-            )
-            Nuke.loadImage(with: url, options: options, into: cell.imageView)
+            cell.imageViewLoadImage(with: url)
         }
         
         return cell

@@ -10,9 +10,9 @@ import UIKit
 
 class ItemDetailTipsView: UIView {
 
-    @IBOutlet weak var voteCountLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private weak var voteCountLabel: UILabel!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private var contentView: UIView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

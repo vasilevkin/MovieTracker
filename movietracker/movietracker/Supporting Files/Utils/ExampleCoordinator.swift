@@ -98,7 +98,7 @@ final class ExampleCoordinator: ExampleCoordinatable {
 /**
  Possible child coordinators for ExampleCoordinator.
  */
-enum ExampleCoordinatorChild {
+enum ExampleCoordinatorChild: Hashable {
     case child1
     case child2
 }

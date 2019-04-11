@@ -10,10 +10,10 @@ import UIKit
 
 class CarouselSectionTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +39,15 @@ class CarouselSectionTableViewCell: UITableViewCell {
                                                    bottom: 0,
                                                    right: Constants.uiCollectionViewContentInset)
     }
+
+    func updateTitleLabel(with text: String) {
+        self.titleLabel.text = text
+    }
+
+    func updateSubtitleLabel(with text: String) {
+        self.subtitleLabel.text = text
+    }
+
 }
 
 extension CarouselSectionTableViewCell {
