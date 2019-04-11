@@ -46,3 +46,32 @@ protocol MovieDetailCoordinatorDelegate: AnyObject {
     func movieDetailCoordinatorDidFinish()
 
 }
+
+// MARK: - TVShowDetailCoordinator childs and delegate protocol
+
+/**
+ Possible child coordinators for TVShowDetailCoordinator.
+ */
+enum TVShowDetailCoordinatorChild: Hashable {
+
+}
+
+/**
+ Parent delegate protocol for TVShowDetailCoordinator.
+ Should be implemented by parent Coordinator who invoked TVShowDetailCoordinator.
+ */
+protocol TVShowDetailCoordinatorDelegate: AnyObject {
+
+    /**
+     Initial TV Show Id. Required for details flow to work correctly.
+     */
+    var tvShowId: Int? { get }
+
+    /**
+     Invoked when the tv show detail flow is no longer needed
+     Coordinator never finishes by itself,
+     but calls its Parent Coordinator only when it finished work.
+     */
+    func tvShowDetailCoordinatorDidFinish()
+
+}

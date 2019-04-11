@@ -55,7 +55,20 @@ final class FeaturedCoordinator: FeaturedCoordinatable {
     }
     
     func navigateToTVShowDetailScene(with tvShowId: Int, api: ApiThemoviedbService) {
+        tvShowID = tvShowId
 
+        if let tvShowID = tvShowID,
+            tvShowID != 0 {
+            dLog("FeaturedCoordinator:: start TVShowDetailCoordinator with tvShowID = \(tvShowID)")
+        } else {
+            dLog("FeaturedCoordinator:: start TVShowDetailCoordinator with tvShowID = nil or 0")
+        }
+
+        let tvShowDetailCoordinator = TVShowDetailCoordinator(navigationController: navigationController)
+
+        childCoordinators[.tvShowDetail] = tvShowDetailCoordinator
+        tvShowDetailCoordinator.delegate = self
+        tvShowDetailCoordinator.start()
     }
 
 }
@@ -70,6 +83,23 @@ extension FeaturedCoordinator: MovieDetailCoordinatorDelegate {
         dLog("FeaturedCoordinator:: childCoordinators[.movieDetail] = nil")
 
         childCoordinators[.movieDetail] = nil
+        navigationController.popViewController(animated: true)
+
+        dLog("FeaturedCoordinator:: childCoordinators = \(childCoordinators)")
+    }
+
+}
+
+extension FeaturedCoordinator: TVShowDetailCoordinatorDelegate {
+    
+    var tvShowId: Int? {
+        return self.tvShowID
+    }
+
+    func tvShowDetailCoordinatorDidFinish() {
+        dLog("FeaturedCoordinator:: childCoordinators[.tvShowDetail] = nil")
+
+        childCoordinators[.tvShowDetail] = nil
         navigationController.popViewController(animated: true)
 
         dLog("FeaturedCoordinator:: childCoordinators = \(childCoordinators)")
