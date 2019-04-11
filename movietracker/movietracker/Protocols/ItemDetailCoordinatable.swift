@@ -13,7 +13,36 @@ import Foundation
  */
 protocol ItemDetailCoordinatable: Coordinatable {
     /**
-     Transition back to the presenting View Controller
+     Initial Item Id. Required for details flow to work correctly.
      */
-    func goBack()
+    var itemId: Int? { get set }
+}
+
+// MARK: - MovieDetailCoordinator childs and delegate protocol
+
+/**
+ Possible child coordinators for MovieDetailCoordinator.
+ */
+enum MovieDetailCoordinatorChild: Hashable {
+
+}
+
+/**
+ Parent delegate protocol for MovieDetailCoordinator.
+ Should be implemented by parent Coordinator who invoked MovieDetailCoordinator.
+ */
+protocol MovieDetailCoordinatorDelegate: AnyObject {
+
+    /**
+     Initial Movie Id. Required for details flow to work correctly.
+     */
+    var movieId: Int? { get }
+
+    /**
+     Invoked when the movie detail flow is no longer needed
+     Coordinator never finishes by itself,
+     but calls its Parent Coordinator only when it finished work.
+     */
+    func movieDetailCoordinatorDidFinish()
+
 }

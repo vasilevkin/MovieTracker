@@ -57,6 +57,8 @@ class ApplicationCoordinator: Coordinatable {
     // MARK: - Private
 
     private func showFeaturedMainScene() {
+        dLog("MovieDetailCoordinator:: start FeaturedCoordinator")
+
         let featuredCoordinator = FeaturedCoordinator(navigationController: navigationController)
 
         childCoordinators[.featured] = featuredCoordinator
