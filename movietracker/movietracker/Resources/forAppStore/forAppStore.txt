@@ -1,4 +1,4 @@
-Movie Tracker
+Movie Tracker trailers
 
 
 Keywords:
@@ -15,14 +15,20 @@ The app is just helps you to find movies and tv shows.
 The app uses the TMDb API but is not endorsed or certified by TMDb:
 https://www.themoviedb.org/documentation/api/terms-of-use
 
-Promo:
-Discover popular movies and tv shows.
+Promo subtitle:
+Discover popular movies and tv shows
 
 Support URL:
 https://svasilevkin.wordpress.com/contact-me/
+
+Marketing URL:
+https://svasilevkin.wordpress.com/my-apps/
 
 Copyright:
 2019 Sergey Vasilevkin
 
 Privacy Policy:
 http://htmlpreview.github.io/?https://github.com/vasilevkin/MovieTracker/blob/master/privacy_policy.html
+
+Category:
+Entertainment
