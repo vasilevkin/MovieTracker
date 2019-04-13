@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleMovieDetail" translatesAutoresizingMaskIntoConstraints="NO" id="Oc7-sR-WUt" customClass="GradientImageView" customModule="movietracker" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderMovieDetail" translatesAutoresizingMaskIntoConstraints="NO" id="Oc7-sR-WUt" customClass="GradientImageView" customModule="movietracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="562.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Oc7-sR-WUt" secondAttribute="height" multiplier="2/3" id="EHP-GL-gbn"/>
@@ -134,6 +134,7 @@
                             <constraint firstItem="Oc7-sR-WUt" firstAttribute="top" secondItem="pbW-wn-DTL" secondAttribute="top" id="DH3-xK-fzs"/>
                             <constraint firstItem="SBY-kE-95b" firstAttribute="trailing" secondItem="bgc-mL-XEU" secondAttribute="trailing" id="Rh4-4K-QT5"/>
                             <constraint firstItem="Oc7-sR-WUt" firstAttribute="leading" secondItem="SBY-kE-95b" secondAttribute="leading" id="bXl-Hg-i4J"/>
+                            <constraint firstItem="Oc7-sR-WUt" firstAttribute="width" secondItem="pbW-wn-DTL" secondAttribute="width" id="h7B-2w-DFF"/>
                             <constraint firstItem="Wzj-8P-mNC" firstAttribute="width" secondItem="pbW-wn-DTL" secondAttribute="width" id="qfh-h3-IHC"/>
                             <constraint firstItem="bgc-mL-XEU" firstAttribute="top" secondItem="SBY-kE-95b" secondAttribute="top" id="y6A-1N-Jbo"/>
                         </constraints>
@@ -153,6 +154,6 @@
     </scenes>
     <resources>
         <image name="back_arrow" width="100" height="100"/>
-        <image name="sampleMovieDetail" width="1280" height="1825"/>
+        <image name="placeholderMovieDetail" width="730" height="975"/>
     </resources>
 </document>

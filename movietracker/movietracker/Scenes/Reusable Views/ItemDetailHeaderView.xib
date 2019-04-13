@@ -27,8 +27,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7t-MJ-EQQ" userLabel="Title Label">
-                    <rect key="frame" x="20" y="64" width="26.5" height="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7t-MJ-EQQ" userLabel="Title Label">
+                    <rect key="frame" x="20" y="64" width="335" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -111,6 +111,7 @@
                 <constraint firstItem="q7t-MJ-EQQ" firstAttribute="top" secondItem="ufQ-tk-9Gw" secondAttribute="top" constant="20" id="Wuh-cn-2Rd"/>
                 <constraint firstItem="Jqc-H1-hbq" firstAttribute="leading" secondItem="ufQ-tk-9Gw" secondAttribute="leading" constant="20" id="b77-AS-j2H"/>
                 <constraint firstItem="b40-K2-goU" firstAttribute="centerY" secondItem="WPg-L2-vLM" secondAttribute="centerY" id="h1c-sL-u79"/>
+                <constraint firstItem="ufQ-tk-9Gw" firstAttribute="trailing" secondItem="q7t-MJ-EQQ" secondAttribute="trailing" constant="20" id="hBi-64-0tr"/>
                 <constraint firstAttribute="trailing" secondItem="FKe-8S-QEc" secondAttribute="trailing" constant="20" id="oWc-cC-eoV"/>
                 <constraint firstItem="ufQ-tk-9Gw" firstAttribute="bottom" secondItem="FKe-8S-QEc" secondAttribute="bottom" priority="750" constant="40" id="rhA-dJ-Mrh"/>
                 <constraint firstItem="q7t-MJ-EQQ" firstAttribute="leading" secondItem="ufQ-tk-9Gw" secondAttribute="leading" constant="20" id="sQh-wI-2C6"/>
