@@ -15,6 +15,7 @@
                 <outlet property="contentView" destination="Ca6-2j-eGP" id="GC0-Ov-ehO"/>
                 <outlet property="genresLabel" destination="WPg-L2-vLM" id="3fH-Dn-gye"/>
                 <outlet property="overviewLabel" destination="FKe-8S-QEc" id="efE-SA-SIQ"/>
+                <outlet property="overviewTitleLabel" destination="Jqc-H1-hbq" id="h0N-yf-1Ci"/>
                 <outlet property="releaseDateLabel" destination="eIX-YY-0Lx" id="aom-gI-6pw"/>
                 <outlet property="runtimeLabel" destination="4au-aX-p3t" id="duA-GL-2KL"/>
                 <outlet property="titleLabel" destination="q7t-MJ-EQQ" id="Gen-9l-VGl"/>
@@ -26,68 +27,67 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7t-MJ-EQQ" userLabel="Aquaman">
-                    <rect key="frame" x="20" y="40" width="60.5" height="42"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7t-MJ-EQQ" userLabel="Title Label">
+                    <rect key="frame" x="20" y="64" width="26.5" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2006" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIX-YY-0Lx">
-                    <rect key="frame" x="20" y="82" width="34.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIX-YY-0Lx">
+                    <rect key="frame" x="20" y="100" width="63" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Animation, Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-L2-vLM">
-                    <rect key="frame" x="20" y="163" width="127" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-L2-vLM">
+                    <rect key="frame" x="20" y="157" width="13" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqc-H1-hbq" userLabel="Overview">
-                    <rect key="frame" x="20" y="244" width="60.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqc-H1-hbq" userLabel="Overview">
+                    <rect key="frame" x="20" y="214" width="60.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1h 57min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4au-aX-p3t">
-                    <rect key="frame" x="174" y="163" width="59" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-h --min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4au-aX-p3t">
+                    <rect key="frame" x="60" y="157" width="55" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="67%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b40-K2-goU">
-                    <rect key="frame" x="284.5" y="163.5" width="28.5" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b40-K2-goU">
+                    <rect key="frame" x="166.5" y="157" width="6.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="star_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-wD-2Gd">
-                    <rect key="frame" x="257.5" y="161" width="15" height="15"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-wD-2Gd">
+                    <rect key="frame" x="139.5" y="158" width="15" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="QZu-RU-ACv"/>
                         <constraint firstAttribute="width" constant="15" id="iwA-Nr-yB2"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-9m-kvY" userLabel="left_dot">
-                    <rect key="frame" x="159" y="172" width="3" height="3"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-9m-kvY" userLabel="left_dot">
+                    <rect key="frame" x="45" y="164" width="3" height="3"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="3" id="BEr-2i-Vmh"/>
                         <constraint firstAttribute="width" constant="3" id="VRw-ot-18T"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upu-9z-GGr" userLabel="right_dot">
-                    <rect key="frame" x="242.5" y="172" width="3" height="3"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upu-9z-GGr" userLabel="right_dot">
+                    <rect key="frame" x="124.5" y="164" width="3" height="3"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="3" id="Ica-5l-C6L"/>
                         <constraint firstAttribute="height" constant="3" id="o2L-z5-BU3"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKe-8S-QEc" userLabel="Overview">
-                    <rect key="frame" x="20" y="273" width="335" height="81.5"/>
-                    <string key="text">Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKe-8S-QEc" userLabel="Overview">
+                    <rect key="frame" x="20" y="239" width="335" height="109"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                 <constraint firstItem="Jqc-H1-hbq" firstAttribute="leading" secondItem="ufQ-tk-9Gw" secondAttribute="leading" constant="20" id="b77-AS-j2H"/>
                 <constraint firstItem="b40-K2-goU" firstAttribute="centerY" secondItem="WPg-L2-vLM" secondAttribute="centerY" id="h1c-sL-u79"/>
                 <constraint firstAttribute="trailing" secondItem="FKe-8S-QEc" secondAttribute="trailing" constant="20" id="oWc-cC-eoV"/>
-                <constraint firstItem="ufQ-tk-9Gw" firstAttribute="bottom" secondItem="FKe-8S-QEc" secondAttribute="bottom" constant="40" id="rhA-dJ-Mrh"/>
+                <constraint firstItem="ufQ-tk-9Gw" firstAttribute="bottom" secondItem="FKe-8S-QEc" secondAttribute="bottom" priority="750" constant="40" id="rhA-dJ-Mrh"/>
                 <constraint firstItem="q7t-MJ-EQQ" firstAttribute="leading" secondItem="ufQ-tk-9Gw" secondAttribute="leading" constant="20" id="sQh-wI-2C6"/>
                 <constraint firstItem="GCn-wD-2Gd" firstAttribute="centerY" secondItem="WPg-L2-vLM" secondAttribute="centerY" id="url-gk-R2Y"/>
                 <constraint firstItem="Upu-9z-GGr" firstAttribute="centerY" secondItem="WPg-L2-vLM" secondAttribute="centerY" id="wEK-du-ow9"/>
