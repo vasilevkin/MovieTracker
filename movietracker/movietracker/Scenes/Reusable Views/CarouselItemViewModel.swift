@@ -18,7 +18,9 @@ extension CarouselItemViewModel {
     
     init(movie: Movie) {
         self.title = movie.title
-        self.subtitle = movie.releaseDate ?? "n/a"
+        self.subtitle = movie.releaseDate?
+            .components(separatedBy: "-")
+            .first ?? "n/a"
         self.imageUrl = movie.posterPath
             .flatMap {
                 "http://image.tmdb.org/t/p/w185/" + $0
@@ -27,7 +29,9 @@ extension CarouselItemViewModel {
     
     init(tvShow: TVShow) {
         self.title = tvShow.name
-        self.subtitle = tvShow.firstAirDate ?? "n/a"
+        self.subtitle = tvShow.firstAirDate?
+            .components(separatedBy: "-")
+            .first ?? "n/a"
         self.imageUrl = tvShow.posterPath
             .flatMap {
                 "http://image.tmdb.org/t/p/w185/" + $0
