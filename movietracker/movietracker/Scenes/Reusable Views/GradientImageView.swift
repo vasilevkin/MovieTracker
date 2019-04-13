@@ -23,12 +23,14 @@ class GradientImageView: UIImageView {
     private func setup() {
         layer.backgroundColor = Constants.uiGradientImageViewBackgroundColor.cgColor
         layer.opacity = Constants.uiGradientImageViewOpacity
-        
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.colors = Constants.uiGradientImageViewGradientColors
-        gradient.locations = Constants.uiGradientImageViewGradientLocations
-        layer.mask = gradient
+
+        // Commented out gradient on image background.
+        // It requires more debug and polish.
+//        let gradient = CAGradientLayer()
+//        gradient.frame = bounds
+//        gradient.colors = Constants.uiGradientImageViewGradientColors
+//        gradient.locations = Constants.uiGradientImageViewGradientLocations
+//        layer.mask = gradient
     }
     
 }
