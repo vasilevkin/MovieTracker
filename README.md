@@ -112,7 +112,8 @@ $ open movietracker.xcworkspace
 * [Debug print log](https://svasilevkin.wordpress.com/2019/03/24/debug-print-log/)
 * [Xcode Custom Paths](https://svasilevkin.wordpress.com/2019/04/03/xcode-custom-paths/)
 * [Protect private info in open source project](https://svasilevkin.wordpress.com/2019/04/03/protect-private-info-in-open-source-project/)
- 
+* [Privacy Policy for open source app on GitHub](https://svasilevkin.wordpress.com/2019/04/13/privacy-policy-for-open-source-app-on-github/)
+
 ## Author
 
 Sergey Vasilevkin - [Contact me](https://svasilevkin.wordpress.com/contact-me/)
