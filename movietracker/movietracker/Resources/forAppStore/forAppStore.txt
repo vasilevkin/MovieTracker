@@ -2,7 +2,7 @@ Movie Tracker
 
 
 Keywords:
-movie, tvshow, cinema, tmdb, themoviedb
+movie, tvshow, cinema, tmdb, themoviedb, movie info, tv show info
 
 Description:
 Browse movies and tv shows.
