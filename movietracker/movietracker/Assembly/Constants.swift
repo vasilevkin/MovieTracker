@@ -36,7 +36,7 @@ struct Constants {
     static let uiFeaturedMainViewItemsPerRow: CGFloat = 4
 
     static let uiMovieCellMaxHeight: CGFloat    = 400
-    static let uiMovieCellCornerRadius: CGFloat = 0
+    static let uiMovieCellCornerRadius: CGFloat = 16
     static let uiMovieCellTitleFont: UIFont     = UIFont.boldSystemFont(ofSize: 10)
     static let uiMovieCellSubtitleFont: UIFont  = UIFont.systemFont(ofSize: 8)
 

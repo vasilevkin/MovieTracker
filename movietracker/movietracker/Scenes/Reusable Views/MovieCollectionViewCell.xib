@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,15 +25,9 @@
                             <constraint firstAttribute="height" constant="150" id="HDR-FC-e6K"/>
                             <constraint firstAttribute="width" constant="100" id="jDE-zE-pvP"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="16"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-p5-L51">
-                        <rect key="frame" x="28" y="166" width="38" height="37"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-p5-L51">
+                        <rect key="frame" x="28.5" y="166" width="37.5" height="37"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -51,9 +45,11 @@
                 <constraint firstItem="elA-EQ-jmc" firstAttribute="top" secondItem="fRR-p5-L51" secondAttribute="bottom" constant="4" id="2hq-Wz-0ex"/>
                 <constraint firstItem="elA-EQ-jmc" firstAttribute="centerX" secondItem="fRR-p5-L51" secondAttribute="centerX" id="Agt-ru-aRO"/>
                 <constraint firstItem="J8W-B0-jnV" firstAttribute="centerX" secondItem="keE-b4-sIA" secondAttribute="centerX" id="Xyq-7z-yU0"/>
+                <constraint firstItem="fRR-p5-L51" firstAttribute="width" relation="lessThanOrEqual" secondItem="J8W-B0-jnV" secondAttribute="width" multiplier="0.95" id="eY3-RT-31u"/>
                 <constraint firstAttribute="bottom" secondItem="elA-EQ-jmc" secondAttribute="bottom" constant="8" id="gFg-SA-L33"/>
                 <constraint firstItem="fRR-p5-L51" firstAttribute="centerX" secondItem="J8W-B0-jnV" secondAttribute="centerX" id="hdw-Km-Al8"/>
                 <constraint firstItem="fRR-p5-L51" firstAttribute="top" secondItem="J8W-B0-jnV" secondAttribute="bottom" constant="8" id="iCL-rE-XHd"/>
+                <constraint firstItem="fRR-p5-L51" firstAttribute="centerX" secondItem="E3Z-PV-dFD" secondAttribute="centerX" id="l9J-PC-R9f"/>
                 <constraint firstItem="J8W-B0-jnV" firstAttribute="top" secondItem="E3Z-PV-dFD" secondAttribute="top" constant="8" id="qqw-lw-tfq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="keE-b4-sIA"/>

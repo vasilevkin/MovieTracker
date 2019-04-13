@@ -14,7 +14,12 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
-    
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setup()
+    }
+
     static func height(forWidth width: CGFloat) -> CGFloat {
         guard let sizingCell = UINib(nibName: String(describing: MovieCollectionViewCell.self), bundle: nil)
             .instantiate(withOwner: nil, options: nil).first as? MovieCollectionViewCell else {
@@ -60,4 +65,17 @@ class MovieCollectionViewCell: UICollectionViewCell {
         Nuke.loadImage(with: url, options: options, into: self.imageView)
     }
 
+    // MARK: - Private
+
+    private func setup() {
+        self.imageView.layer.masksToBounds = true
+        self.imageView.layer.cornerRadius = Constants.uiMovieCellCornerRadius
+
+        self.titleLabel.textColor = Constants.uiTitleTextColor
+        self.subtitleLabel.textColor = Constants.uiSubtitleTextColor
+
+        self.titleLabel.font = Constants.uiMovieCellTitleFont
+        self.subtitleLabel.font = Constants.uiMovieCellSubtitleFont
+
+    }
 }
