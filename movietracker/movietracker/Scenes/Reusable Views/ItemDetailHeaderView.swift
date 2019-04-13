@@ -10,6 +10,7 @@ import UIKit
 
 class ItemDetailHeaderView: UIView {
 
+    @IBOutlet private weak var overviewTitleLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!
     @IBOutlet private weak var genresLabel: UILabel!
@@ -35,12 +36,14 @@ class ItemDetailHeaderView: UIView {
                    voteAverage: String,
                    overview: String) {
         titleLabel.text = title
-        releaseDateLabel.text = releaseDate
+        releaseDateLabel.text = "Release date: \(releaseDate)"
         genresLabel.text = genres
         runtimeLabel.text = runtime
         voteAverageLabel.text = voteAverage
         overviewLabel.text = overview
     }
+
+    // MARK: - Private
 
     private func setup() {
         Bundle.main.loadNibNamed("ItemDetailHeaderView", owner: self, options: nil)
@@ -48,6 +51,20 @@ class ItemDetailHeaderView: UIView {
         
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
+        self.titleLabel.textColor         = Constants.uiTitleTextColor
+        self.releaseDateLabel.textColor   = Constants.uiSubtitleTextColor
+        self.overviewTitleLabel.textColor = Constants.uiSubviewTitleTextColor
+        self.overviewLabel.textColor      = Constants.uiSubviewSubtitleTextColor
+        self.genresLabel.textColor        = Constants.uiSubviewSubtitleTextColor
+        self.runtimeLabel.textColor       = Constants.uiSubviewSubtitleTextColor
+        self.voteAverageLabel.textColor   = Constants.uiSubviewSubtitleTextColor
+
+        self.overviewTitleLabel.font = Constants.uiSubviewTitleFont
+        self.overviewLabel.font      = Constants.uiSubviewSubtitleFont
+        self.genresLabel.font        = Constants.uiSubviewSubtitleFont
+        self.runtimeLabel.font       = Constants.uiSubviewSubtitleFont
+        self.voteAverageLabel.font   = Constants.uiSubviewSubtitleFont
     }
 
 }

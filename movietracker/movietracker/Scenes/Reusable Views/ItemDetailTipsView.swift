@@ -10,6 +10,8 @@ import UIKit
 
 class ItemDetailTipsView: UIView {
 
+    @IBOutlet private weak var voteCountTitleLabel: UILabel!
+    @IBOutlet private weak var statusTitleLabel: UILabel!
     @IBOutlet private weak var voteCountLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private var contentView: UIView!
@@ -36,6 +38,16 @@ class ItemDetailTipsView: UIView {
         
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
+        self.voteCountTitleLabel.textColor  = Constants.uiSubviewTitleTextColor
+        self.statusTitleLabel.textColor     = Constants.uiSubviewTitleTextColor
+        self.voteCountLabel.textColor       = Constants.uiSubviewSubtitleTextColor
+        self.statusLabel.textColor          = Constants.uiSubviewSubtitleTextColor
+
+        self.voteCountTitleLabel.font   = Constants.uiSubviewTitleFont
+        self.statusTitleLabel.font      = Constants.uiSubviewTitleFont
+        self.voteCountLabel.font        = Constants.uiSubviewSubtitleFont
+        self.statusLabel.font           = Constants.uiSubviewSubtitleFont
     }
 
 }

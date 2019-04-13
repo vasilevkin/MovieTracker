@@ -14,7 +14,9 @@
             <connections>
                 <outlet property="contentView" destination="Ozo-9r-ita" id="0pZ-YE-4Oy"/>
                 <outlet property="statusLabel" destination="ROC-Zn-bff" id="m8G-8s-vha"/>
+                <outlet property="statusTitleLabel" destination="loi-f5-LSx" id="KkH-zm-grC"/>
                 <outlet property="voteCountLabel" destination="7Jy-yd-NwM" id="NBE-D3-PaN"/>
+                <outlet property="voteCountTitleLabel" destination="McK-fK-cwY" id="kMM-hL-Xrl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
