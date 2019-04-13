@@ -1,0 +1,28 @@
+Movie Tracker
+
+
+Keywords:
+movie, tvshow, cinema, tmdb, themoviedb
+
+Description:
+Browse movies and tv shows.
+Find and discover great movies and tv shows. Find detailed information about them.
+Stay tuned on the latest movies and tv shows running in the cinema now.
+
+Disclaimer:
+The app is not for streaming or watching movies and tv shows.
+The app is just helps you to find movies and tv shows.
+The app uses the TMDb API but is not endorsed or certified by TMDb:
+https://www.themoviedb.org/documentation/api/terms-of-use
+
+Promo:
+Discover popular movies and tv shows.
+
+Support URL:
+https://svasilevkin.wordpress.com/contact-me/
+
+Copyright:
+2019 Sergey Vasilevkin
+
+Privacy Policy:
+http://htmlpreview.github.io/?https://github.com/vasilevkin/MovieTracker/blob/master/privacy_policy.html
