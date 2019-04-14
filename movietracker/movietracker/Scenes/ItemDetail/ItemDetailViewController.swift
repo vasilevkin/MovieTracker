@@ -15,10 +15,11 @@ import Nuke
 
 class ItemDetailViewController: UIViewController {
     
-    @IBOutlet private weak var headerView: ItemDetailHeaderView!
-    @IBOutlet private weak var tipsView: ItemDetailTipsView!
+    @IBOutlet private weak var headerView:      ItemDetailHeaderView!
+    @IBOutlet private weak var videoView:       ItemDetailVideoView!
+    @IBOutlet private weak var tipsView:        ItemDetailTipsView!
     @IBOutlet private weak var posterImageView: GradientImageView!
-    @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var backButton:      UIButton!
 
     var viewModel: ItemDetailViewModel?
     private let disposeBag = DisposeBag()

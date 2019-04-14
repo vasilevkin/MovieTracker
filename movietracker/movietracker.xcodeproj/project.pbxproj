@@ -14,6 +14,9 @@
 		860C39D122460E91008281D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C39CF22460E91008281D1 /* LaunchScreen.storyboard */; };
 		860C39DC22460E92008281D1 /* movietrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39DB22460E92008281D1 /* movietrackerTests.swift */; };
 		860C39E722460E92008281D1 /* movietrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C39E622460E92008281D1 /* movietrackerUITests.swift */; };
+		8624D71C2263689C0094B669 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8624D71B2263689C0094B669 /* VideoPlayerView.swift */; };
+		86376208226311CF00459E9B /* ItemDetailVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86376206226311CF00459E9B /* ItemDetailVideoView.swift */; };
+		86376209226311CF00459E9B /* ItemDetailVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86376207226311CF00459E9B /* ItemDetailVideoView.xib */; };
 		863F2EC122494DEA00B2F29A /* ApiThemoviedbResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863F2EC022494DEA00B2F29A /* ApiThemoviedbResponses.swift */; };
 		863F2EC32249535D00B2F29A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863F2EC22249535D00B2F29A /* Movie.swift */; };
 		863F2EC5224953C900B2F29A /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863F2EC4224953C800B2F29A /* Genre.swift */; };
@@ -102,6 +105,9 @@
 		860C39E222460E92008281D1 /* movietrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movietrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C39E622460E92008281D1 /* movietrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movietrackerUITests.swift; sourceTree = "<group>"; };
 		860C39E822460E92008281D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8624D71B2263689C0094B669 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		86376206226311CF00459E9B /* ItemDetailVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailVideoView.swift; sourceTree = "<group>"; };
+		86376207226311CF00459E9B /* ItemDetailVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailVideoView.xib; sourceTree = "<group>"; };
 		863F2EC022494DEA00B2F29A /* ApiThemoviedbResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiThemoviedbResponses.swift; sourceTree = "<group>"; };
 		863F2EC22249535D00B2F29A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		863F2EC4224953C800B2F29A /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -381,7 +387,10 @@
 				86FDC5E2224D453F006D0EDF /* MovieCollectionViewCell.xib */,
 				86842B3D224E94240060B7EE /* CarouselViewModel.swift */,
 				868027C52253D96100E289CE /* GradientImageView.swift */,
+				8624D71B2263689C0094B669 /* VideoPlayerView.swift */,
 				868027C12253D7D200E289CE /* ItemDetailTipsView.swift */,
+				86376206226311CF00459E9B /* ItemDetailVideoView.swift */,
+				86376207226311CF00459E9B /* ItemDetailVideoView.xib */,
 				868027C22253D7D200E289CE /* ItemDetailTipsView.xib */,
 				86E3EE6C22528C8800177C22 /* ItemDetailHeaderView.swift */,
 				86E3EE6D22528C8800177C22 /* ItemDetailHeaderView.xib */,
@@ -532,6 +541,7 @@
 				86837B0E225540F1007B057F /* scripts in Resources */,
 				864BBF9E226246DB00F54348 /* forAppStore in Resources */,
 				869B8C81224F41B900417E3E /* FeaturedMainView.xib in Resources */,
+				86376209226311CF00459E9B /* ItemDetailVideoView.xib in Resources */,
 				860C39C922460E8F008281D1 /* Main.storyboard in Resources */,
 				86E3EE6F22528C8800177C22 /* ItemDetailHeaderView.xib in Resources */,
 				868027C42253D7D200E289CE /* ItemDetailTipsView.xib in Resources */,
@@ -701,11 +711,13 @@
 				869B8C80224F41B900417E3E /* FeaturedMainView.swift in Sources */,
 				860C39CC22460E8F008281D1 /* movietracker.xcdatamodeld in Sources */,
 				868027CC2253E0C500E289CE /* ItemDetailCoordinatable.swift in Sources */,
+				86376208226311CF00459E9B /* ItemDetailVideoView.swift in Sources */,
 				86789C512250F66300FAC27F /* Coordinatable.swift in Sources */,
 				868027C82253D9A000E289CE /* ItemDetailViewModel.swift in Sources */,
 				869B8C77224F3A2200417E3E /* UIViewController+Rx.swift in Sources */,
 				86789C4F2250EF8C00FAC27F /* FeaturedCoordinator.swift in Sources */,
 				863F2EC5224953C900B2F29A /* Genre.swift in Sources */,
+				8624D71C2263689C0094B669 /* VideoPlayerView.swift in Sources */,
 				868027C62253D96100E289CE /* GradientImageView.swift in Sources */,
 				869EE958224BF22A003B6747 /* Constants.swift in Sources */,
 				8646F61C2258C85B00C9D981 /* ApplicationCoordinator.swift in Sources */,

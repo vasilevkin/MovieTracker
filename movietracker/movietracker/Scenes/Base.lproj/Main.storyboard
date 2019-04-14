@@ -81,8 +81,21 @@
                                                     <constraint firstAttribute="height" constant="128" placeholder="YES" id="XK7-K4-gUl"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FL-pm-nbO" customClass="ItemDetailTipsView" customModule="movietracker" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-UH-2cg" customClass="ItemDetailVideoView" customModule="movietracker" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="208" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="evU-I8-da1"/>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="hHO-NV-U3Q"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="evU-I8-da1"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FL-pm-nbO" customClass="ItemDetailTipsView" customModule="movietracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="356" width="375" height="128"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" placeholder="YES" id="Ozp-NA-gwS"/>
@@ -105,14 +118,17 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="7FL-pm-nbO" firstAttribute="top" secondItem="mDH-ql-Xjq" secondAttribute="bottom" constant="20" id="JX8-cL-Ev0"/>
+                                            <constraint firstItem="kd2-UH-2cg" firstAttribute="top" secondItem="mDH-ql-Xjq" secondAttribute="bottom" constant="20" id="JX8-cL-Ev0"/>
                                             <constraint firstItem="mDH-ql-Xjq" firstAttribute="top" secondItem="Wzj-8P-mNC" secondAttribute="top" constant="60" id="Mu1-Ns-zdR"/>
                                             <constraint firstItem="i7g-bq-kRQ" firstAttribute="leading" secondItem="Wzj-8P-mNC" secondAttribute="leading" constant="20" id="PGJ-EX-fbB"/>
                                             <constraint firstItem="i7g-bq-kRQ" firstAttribute="top" secondItem="Wzj-8P-mNC" secondAttribute="top" constant="20" id="Pdg-Kd-6OB"/>
+                                            <constraint firstItem="7FL-pm-nbO" firstAttribute="top" secondItem="kd2-UH-2cg" secondAttribute="bottom" constant="20" id="WaB-uL-aKC"/>
                                             <constraint firstItem="7FL-pm-nbO" firstAttribute="leading" secondItem="Wzj-8P-mNC" secondAttribute="leading" id="ahd-4x-Xvs"/>
                                             <constraint firstAttribute="trailing" secondItem="mDH-ql-Xjq" secondAttribute="trailing" id="b3u-NC-t2d"/>
                                             <constraint firstItem="mDH-ql-Xjq" firstAttribute="leading" secondItem="Wzj-8P-mNC" secondAttribute="leading" id="iEB-8d-vBj"/>
                                             <constraint firstAttribute="trailing" secondItem="7FL-pm-nbO" secondAttribute="trailing" id="j6u-Wl-e2M"/>
+                                            <constraint firstItem="kd2-UH-2cg" firstAttribute="leading" secondItem="Wzj-8P-mNC" secondAttribute="leading" id="oyu-nt-PnB"/>
+                                            <constraint firstAttribute="trailing" secondItem="kd2-UH-2cg" secondAttribute="trailing" id="rlp-pY-siE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -146,6 +162,7 @@
                         <outlet property="headerView" destination="mDH-ql-Xjq" id="Y6E-Hy-11d"/>
                         <outlet property="posterImageView" destination="Oc7-sR-WUt" id="Wff-bq-3YY"/>
                         <outlet property="tipsView" destination="7FL-pm-nbO" id="s6T-ht-TKT"/>
+                        <outlet property="videoView" destination="kd2-UH-2cg" id="7wM-Jq-6dp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsn-Ok-LwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
