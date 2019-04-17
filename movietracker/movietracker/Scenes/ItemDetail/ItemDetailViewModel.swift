@@ -25,6 +25,7 @@ final class ItemDetailViewModel: ViewModelType {
     
     struct Output {
         let data: Driver<ItemDetailData?>
+        let mediaData: Driver<AdditionalMediaItemDetailData?>
         let back: Driver<Void>
     }
     
@@ -69,7 +70,21 @@ final class ItemDetailViewModel: ViewModelType {
                 }
                 .asDriver(onErrorJustReturn: nil)
 
-            return Output(data: data, back: back)
+            let mediaData = input.ready
+                .asObservable()
+                .flatMap { _ in
+                    self.dependencies.api.fetchMovieVideos(for: self.dependencies.itemId)
+                }
+                .map { video -> AdditionalMediaItemDetailData? in
+                    guard let video = video, let first = video.first else {
+                        dLog("Unexpectedly found nil")
+                        return nil
+                    }
+                    return AdditionalMediaItemDetailData(video: first)
+                }
+                .asDriver(onErrorJustReturn: nil)
+
+            return Output(data: data, mediaData: mediaData, back: back)
 
         case .tvShow:
             let data = input.ready

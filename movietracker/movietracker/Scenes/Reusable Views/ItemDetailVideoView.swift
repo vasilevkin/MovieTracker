@@ -27,9 +27,13 @@ class ItemDetailVideoView: UIView {
     
     func configure(with title: String,
                    subtitle: String,
-                   videoPlayer: String) {
+                   videoPlayerId: String) {
         self.trailerTitleLabel.text = title
         self.trailerSubtitleLabel.text = subtitle
+
+        dLog("play Youtube video with id = \(videoPlayerId)")
+
+        videoPlayerView.playYoutube(with: videoPlayerId)
     }
     
     private func setup() {
@@ -49,9 +53,11 @@ class ItemDetailVideoView: UIView {
 }
 
 extension ItemDetailVideoView {
-    
-    func configure(with data: ItemDetailData) {
-        
+
+    func configure(with data: AdditionalMediaItemDetailData) {
+        configure(with: data.videoName ?? "Video unavailable",
+                  subtitle: data.videoType ?? "n/a",
+                  videoPlayerId: data.videoKey ?? "")
     }
-    
+
 }

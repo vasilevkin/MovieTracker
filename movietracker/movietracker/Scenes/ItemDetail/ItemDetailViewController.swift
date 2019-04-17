@@ -15,11 +15,11 @@ import Nuke
 
 class ItemDetailViewController: UIViewController {
     
-    @IBOutlet private weak var headerView:      ItemDetailHeaderView!
-    @IBOutlet private weak var videoView:       ItemDetailVideoView!
-    @IBOutlet private weak var tipsView:        ItemDetailTipsView!
+    @IBOutlet private weak var headerView: ItemDetailHeaderView!
+    @IBOutlet private weak var videoView: ItemDetailVideoView!
+    @IBOutlet private weak var tipsView: ItemDetailTipsView!
     @IBOutlet private weak var posterImageView: GradientImageView!
-    @IBOutlet private weak var backButton:      UIButton!
+    @IBOutlet private weak var backButton: UIButton!
 
     var viewModel: ItemDetailViewModel?
     private let disposeBag = DisposeBag()
@@ -40,7 +40,7 @@ class ItemDetailViewController: UIViewController {
     
     private func bindViewModel() {
         let input = ItemDetailViewModel.Input(ready: rx.viewWillAppear.asDriver(),
-                                               backTrigger: backButton.rx.tap.asDriver())
+                                              backTrigger: backButton.rx.tap.asDriver())
         
         let output = viewModel?.transform(input: input)
         
@@ -60,7 +60,18 @@ class ItemDetailViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
-        
+
+        output?.mediaData
+            .drive(onNext: { [weak self] mediaData in
+                guard let mediaData = mediaData,
+                    let strongSelf = self else {
+                        dLog("Unexpectedly found nil")
+                        return
+                }
+                strongSelf.videoView.configure(with: mediaData)
+            })
+            .disposed(by: disposeBag)
+
         output?.back
             .drive()
             .disposed(by: disposeBag)
