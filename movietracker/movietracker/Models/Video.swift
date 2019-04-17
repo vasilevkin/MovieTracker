@@ -23,7 +23,7 @@ struct Video: Decodable {
     let site: String?
     let size: Int?
     let type: String?
-    let videoId: Int
+    let videoId: String
 
     enum CodingKeys: String, CodingKey {
         case iso6391 = "iso_639_1"
