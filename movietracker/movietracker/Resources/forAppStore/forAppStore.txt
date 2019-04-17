@@ -2,12 +2,13 @@ Movie Tracker trailers
 
 
 Keywords:
-movie, tvshow, cinema, tmdb, themoviedb, movie info, tv show info
+movie, tvshow, cinema, tmdb, themoviedb, movie info, tv show info, trailer
 
 Description:
 Browse movies and tv shows.
 Find and discover great movies and tv shows. Find detailed information about them.
 Stay tuned on the latest movies and tv shows running in the cinema now.
+Watch intresting trailers for movies and tv shows.
 
 Disclaimer:
 The app is not for streaming or watching movies and tv shows.
