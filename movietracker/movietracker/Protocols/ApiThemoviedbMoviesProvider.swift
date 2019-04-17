@@ -29,7 +29,15 @@ protocol ApiThemoviedbMoviesProvider {
      - Returns: Optional observable of 'Movie' type
      */
     func fetchMovieDetails(for movieId: Int) -> Observable<Movie?>
-    
+
+    /**
+     Fetches movie videos for single movieId from themoviedb.org api
+
+     - Parameter movieId: unique movie identifier (id)
+     - Returns: Optional observable array of 'Video' type
+     */
+    func fetchMovieVideos(for movieId: Int) -> Observable<[Video]?>
+
     /**
      Fetches custom requested movies from themoviedb.org api
      

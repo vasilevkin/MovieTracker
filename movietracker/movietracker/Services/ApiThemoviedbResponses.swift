@@ -27,3 +27,7 @@ struct MoviesResponse: Decodable {
 struct TVShowsResponse: Decodable {
     let results: [TVShow]
 }
+
+struct VideosResponse: Decodable {
+    let results: [Video]
+}

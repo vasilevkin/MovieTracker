@@ -60,6 +60,26 @@ final class ApiThemoviedb: ApiThemoviedbService {
         }
     }
 
+    func fetchMovieVideos(for movieId: Int) -> Observable<[Video]?> {
+        dLog("movieId = \(movieId)")
+        
+        return httpClient
+            .get(url: "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=\(constants.themoviedbApiKey)&language=en-US)")
+            .map { data -> [Video]? in
+                guard let data = data else {
+                    dLog("Unexpectedly found nil")
+                    return nil
+                }
+                do {
+                    let response = try JSONDecoder().decode(VideosResponse.self, from: data)
+                    return response.results
+                } catch {
+                    dLog("JSONDecoder decode error: \(error)")
+                    return nil
+                }
+        }
+    }
+    
     func searchMovies(for query: String) -> Observable<[Movie]?> {
         return httpClient
             .get(url: "https://api.themoviedb.org/3/search/movie?api_key=\(constants.themoviedbApiKey)&language=en-US&query=\(query)&page=1&include_adult=false")
