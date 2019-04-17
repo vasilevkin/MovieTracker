@@ -24,6 +24,7 @@
 		864BBF9E226246DB00F54348 /* forAppStore in Resources */ = {isa = PBXBuildFile; fileRef = 864BBF9D226246DA00F54348 /* forAppStore */; };
 		865B67102247CF92002ECD99 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B670F2247CF92002ECD99 /* DebugPrint.swift */; };
 		865B67122247E68B002ECD99 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B67112247E68B002ECD99 /* HTTPClient.swift */; };
+		866023542266173000C46724 /* AdditionalMediaItemDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866023532266172F00C46724 /* AdditionalMediaItemDetailData.swift */; };
 		86789C492250920200FAC27F /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86789C482250920200FAC27F /* Secret.swift */; };
 		86789C4B22509A0E00FAC27F /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86789C4A22509A0E00FAC27F /* TVShow.swift */; };
 		86789C4D2250ECB200FAC27F /* FeaturedCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86789C4C2250ECB200FAC27F /* FeaturedCoordinatable.swift */; };
@@ -116,6 +117,7 @@
 		864BBF9D226246DA00F54348 /* forAppStore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = forAppStore; sourceTree = "<group>"; };
 		865B670F2247CF92002ECD99 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		865B67112247E68B002ECD99 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		866023532266172F00C46724 /* AdditionalMediaItemDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalMediaItemDetailData.swift; sourceTree = "<group>"; };
 		86789C482250920200FAC27F /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		86789C4A22509A0E00FAC27F /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		86789C4C2250ECB200FAC27F /* FeaturedCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCoordinatable.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				86BE8E9D2265A0AF003ED27F /* Video.swift */,
 				868027C92253DE4000E289CE /* ItemDetailData.swift */,
 				86789C4A22509A0E00FAC27F /* TVShow.swift */,
+				866023532266172F00C46724 /* AdditionalMediaItemDetailData.swift */,
 				863F2EC4224953C800B2F29A /* Genre.swift */,
 			);
 			path = Models;
@@ -730,6 +733,7 @@
 				867F63E62247901800D2524D /* FeaturedViewController.swift in Sources */,
 				863F2EC122494DEA00B2F29A /* ApiThemoviedbResponses.swift in Sources */,
 				86789C4D2250ECB200FAC27F /* FeaturedCoordinatable.swift in Sources */,
+				866023542266173000C46724 /* AdditionalMediaItemDetailData.swift in Sources */,
 				867F63ED2247A94E00D2524D /* HTTPClientService.swift in Sources */,
 				865B67122247E68B002ECD99 /* HTTPClient.swift in Sources */,
 				86AD8F102259E94B002F3674 /* ApiThemoviedbTVShowsProvider.swift in Sources */,
