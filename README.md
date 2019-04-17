@@ -11,6 +11,10 @@
 <a href="https://github.com/vasilevkin/MovieTracker/commits/master">
 <img src="https://img.shields.io/github/last-commit/vasilevkin/MovieTracker.svg" alt="last commit">
 
+<!-- Commits since latest release-->
+<a href="https://github.com/vasilevkin/MovieTracker/releases">
+<img src="https://img.shields.io/github/commits-since/vasilevkin/MovieTracker/latest.svg" alt="commits latest release">
+
 <!-- Open issues -->
 <a href="https://github.com/vasilevkin/MovieTracker/issues">
 <img src="https://img.shields.io/github/issues-raw/vasilevkin/MovieTracker.svg" alt="open issues">
@@ -25,7 +29,7 @@
 
 <!-- Swift version -->
 <a href="https://developer.apple.com/swift/">
-<img src="https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat" alt="Swift version">
+<img src="https://img.shields.io/badge/Swift-5-orange.svg?style=flat" alt="Swift version">
 </div>
 
 <div align="center">
