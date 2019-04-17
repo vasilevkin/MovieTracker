@@ -19,12 +19,12 @@ final class ApiThemoviedb: ApiThemoviedbService {
 
     private let httpClient: HTTPClientService
     private let constants: Secret
-    
+
     init(httpClient: HTTPClientService = HTTPClient(), constants: Secret = Secret()) {
         self.httpClient = httpClient
         self.constants = constants
     }
-    
+
     // MARK: - Movies
 
     func fetchPopularMovies() -> Observable<[Movie]?> {
@@ -122,6 +122,26 @@ final class ApiThemoviedb: ApiThemoviedbService {
                 do {
                     let response = try JSONDecoder().decode(TVShow.self, from: data)
                     return response
+                } catch {
+                    dLog("JSONDecoder decode error: \(error)")
+                    return nil
+                }
+        }
+    }
+
+    func fetchTVShowVideos(for tvShowId: Int) -> Observable<[Video]?> {
+        dLog("tvShowId = \(tvShowId)")
+        
+        return httpClient
+            .get(url: "https://api.themoviedb.org/3/tv/\(tvShowId)/videos?api_key=\(constants.themoviedbApiKey)&language=en-US)")
+            .map { data -> [Video]? in
+                guard let data = data else {
+                    dLog("Unexpectedly found nil")
+                    return nil
+                }
+                do {
+                    let response = try JSONDecoder().decode(VideosResponse.self, from: data)
+                    return response.results
                 } catch {
                     dLog("JSONDecoder decode error: \(error)")
                     return nil

@@ -31,6 +31,14 @@ protocol ApiThemoviedbTVShowsProvider {
     func fetchTVShowDetails(for tvShowId: Int) -> Observable<TVShow?>
 
     /**
+     Fetches tv show videos for single tvShowId from themoviedb.org api
+
+     - Parameter tvShowId: unique tv show identifier (id)
+     - Returns: Optional observable array of 'Video' type
+     */
+    func fetchTVShowVideos(for tvShowId: Int) -> Observable<[Video]?>
+
+    /**
      Fetches custom requested tv shows from themoviedb.org api
 
      - Parameter query: tv show query string
