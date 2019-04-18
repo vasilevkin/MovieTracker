@@ -121,6 +121,9 @@ Sergey Vasilevkin - [Contact me](https://svasilevkin.wordpress.com/contact-me/)
 My blog
 [Passionate Mobile Development](https://svasilevkin.wordpress.com/blog/)
 
+Download in AppStore: 
+[Movie Tracker trailers](https://itunes.apple.com/us/app/movie-tracker-trailers/id1459756006)
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
