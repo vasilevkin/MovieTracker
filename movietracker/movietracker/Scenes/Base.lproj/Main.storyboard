@@ -169,6 +169,121 @@
             </objects>
             <point key="canvasLocation" x="1807" y="45"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="FBZ-lj-TIK">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetailViewController-scrollview-backup" id="QVL-iO-3NO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nhm-vN-GWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderMovieDetail" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-dI-zsj" customClass="GradientImageView" customModule="movietracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="52.5" width="375" height="562.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ufh-dI-zsj" secondAttribute="height" multiplier="2/3" id="BsX-xK-rv2"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dh7-jv-etX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-Xi-2QZ" userLabel="Content VIew">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyR-eT-rm8" customClass="ItemDetailHeaderView" customModule="movietracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="O3P-AA-vR2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52x-xk-2B4" customClass="ItemDetailVideoView" customModule="movietracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="208" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="LxW-1Y-IdW"/>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="rmT-SJ-xCW"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="LxW-1Y-IdW"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf2-Fx-Ont" customClass="ItemDetailTipsView" customModule="movietracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="356" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="0nt-zf-wgq"/>
+                                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="fNy-Ek-VyE"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="fNy-Ek-VyE"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-Fg-73X">
+                                                <rect key="frame" x="20" y="20" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="7uk-Qk-nyP"/>
+                                                    <constraint firstAttribute="width" constant="35" id="g8r-Ro-La6"/>
+                                                </constraints>
+                                                <state key="normal" image="back_arrow"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="52x-xk-2B4" firstAttribute="top" secondItem="FyR-eT-rm8" secondAttribute="bottom" constant="20" id="0Mr-Mf-bc0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jf2-Fx-Ont" secondAttribute="trailing" id="2AB-4w-r96"/>
+                                            <constraint firstAttribute="trailing" secondItem="FyR-eT-rm8" secondAttribute="trailing" id="3e9-K5-xG0"/>
+                                            <constraint firstItem="FyR-eT-rm8" firstAttribute="top" secondItem="qvh-Xi-2QZ" secondAttribute="top" constant="60" id="97r-dk-FD3"/>
+                                            <constraint firstItem="FyR-eT-rm8" firstAttribute="leading" secondItem="qvh-Xi-2QZ" secondAttribute="leading" id="CWM-2F-8ZS"/>
+                                            <constraint firstItem="Jf2-Fx-Ont" firstAttribute="top" secondItem="52x-xk-2B4" secondAttribute="bottom" constant="20" id="J0X-mx-NGm"/>
+                                            <constraint firstItem="52x-xk-2B4" firstAttribute="leading" secondItem="qvh-Xi-2QZ" secondAttribute="leading" id="mdo-gE-dLM"/>
+                                            <constraint firstItem="e9S-Fg-73X" firstAttribute="leading" secondItem="qvh-Xi-2QZ" secondAttribute="leading" constant="20" id="oWo-oQ-8CY"/>
+                                            <constraint firstItem="e9S-Fg-73X" firstAttribute="top" secondItem="qvh-Xi-2QZ" secondAttribute="top" constant="20" id="rAM-7S-bRI"/>
+                                            <constraint firstAttribute="trailing" secondItem="52x-xk-2B4" secondAttribute="trailing" id="xU4-7p-pAR"/>
+                                            <constraint firstItem="Jf2-Fx-Ont" firstAttribute="leading" secondItem="qvh-Xi-2QZ" secondAttribute="leading" id="yKW-yW-RKM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qvh-Xi-2QZ" secondAttribute="trailing" id="JNx-xt-N0D"/>
+                                    <constraint firstItem="qvh-Xi-2QZ" firstAttribute="leading" secondItem="dh7-jv-etX" secondAttribute="leading" id="Tga-Qz-wix"/>
+                                    <constraint firstItem="qvh-Xi-2QZ" firstAttribute="top" secondItem="dh7-jv-etX" secondAttribute="top" id="ThB-PC-JlN"/>
+                                    <constraint firstAttribute="bottom" secondItem="qvh-Xi-2QZ" secondAttribute="bottom" id="qsC-PP-Wod"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ufh-dI-zsj" firstAttribute="width" secondItem="Nhm-vN-GWZ" secondAttribute="width" id="3BO-ef-Nx4"/>
+                            <constraint firstItem="dh7-jv-etX" firstAttribute="top" secondItem="G8q-lS-EXL" secondAttribute="top" id="5Kz-Vt-hWK"/>
+                            <constraint firstItem="G8q-lS-EXL" firstAttribute="bottom" secondItem="dh7-jv-etX" secondAttribute="bottom" id="I8E-zY-6Fe"/>
+                            <constraint firstItem="qvh-Xi-2QZ" firstAttribute="height" secondItem="Nhm-vN-GWZ" secondAttribute="height" priority="250" id="MN7-sE-q36"/>
+                            <constraint firstItem="G8q-lS-EXL" firstAttribute="trailing" secondItem="dh7-jv-etX" secondAttribute="trailing" id="bHl-cm-SHg"/>
+                            <constraint firstItem="Ufh-dI-zsj" firstAttribute="trailing" secondItem="G8q-lS-EXL" secondAttribute="trailing" id="cdD-xa-qzL"/>
+                            <constraint firstItem="dh7-jv-etX" firstAttribute="leading" secondItem="G8q-lS-EXL" secondAttribute="leading" id="hYJ-GE-wUY"/>
+                            <constraint firstItem="Ufh-dI-zsj" firstAttribute="top" relation="lessThanOrEqual" secondItem="Nhm-vN-GWZ" secondAttribute="top" priority="750" id="jbb-DC-Xot"/>
+                            <constraint firstItem="Ufh-dI-zsj" firstAttribute="centerY" secondItem="Nhm-vN-GWZ" secondAttribute="centerY" id="lrt-ys-Bm7"/>
+                            <constraint firstItem="Ufh-dI-zsj" firstAttribute="leading" secondItem="G8q-lS-EXL" secondAttribute="leading" id="t1b-gg-fvq"/>
+                            <constraint firstItem="qvh-Xi-2QZ" firstAttribute="width" secondItem="Nhm-vN-GWZ" secondAttribute="width" id="xEB-DM-4sF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G8q-lS-EXL"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="e9S-Fg-73X" id="fSf-9u-B3e"/>
+                        <outlet property="headerView" destination="FyR-eT-rm8" id="MBe-9u-a7R"/>
+                        <outlet property="posterImageView" destination="Ufh-dI-zsj" id="goh-Vf-IDx"/>
+                        <outlet property="tipsView" destination="Jf2-Fx-Ont" id="UEJ-Ss-ko6"/>
+                        <outlet property="videoView" destination="52x-xk-2B4" id="ONg-4u-0fi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDe-5A-OlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3426" y="819"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back_arrow" width="100" height="100"/>
