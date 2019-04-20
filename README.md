@@ -37,7 +37,14 @@
 <br />
 
 
-Movie Tracker trailers, iOS app. [Download in AppStore Movie Tracker trailers](https://itunes.apple.com/us/app/movie-tracker-trailers/id1459756006)
+Movie Tracker trailers, iOS app. 
+
+
+<p align="center">
+  <a href="https://itunes.apple.com/us/app/movie-tracker-trailers/id1459756006">
+    <img alt="Download on the App Store Movie Tracker trailers" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
+  </a>
+</p>
 
 <h1 align="center">👷 Work in progress 🛠️</h1>
 
