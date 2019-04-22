@@ -30,6 +30,7 @@ def commonPods
     pod 'RxCocoa',    '~> 4.0'
     pod 'SwiftLint'
     pod 'Nuke'
+    pod 'R.swift'
 end
 
 
